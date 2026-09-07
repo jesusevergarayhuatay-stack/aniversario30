@@ -41,7 +41,7 @@
     *{transition:none!important}
   }
   .eyebrow{
-    font-family:var(--f-display);font-weight:700;font-size:clamp(12px,1.6vh,16px);
+    font-family:var(--f-display);font-weight:700;font-size:clamp(12px,1.85vh,19px);
     letter-spacing:.22em;text-transform:uppercase;color:var(--crimson);
     display:flex;align-items:center;gap:14px;margin-bottom:clamp(10px,2vh,22px);
   }
@@ -51,14 +51,14 @@
     font-size:clamp(30px,5.6vh,56px);line-height:1.06;letter-spacing:-.018em;
     text-wrap:balance;margin-bottom:clamp(10px,1.8vh,20px);
   }
-  .lede{color:var(--ink-2);font-size:clamp(16px,2.35vh,22px);max-width:66ch;margin-bottom:clamp(12px,2.4vh,26px)}
+  .lede{color:var(--ink-2);font-size:clamp(16px,2.6vh,29px);max-width:66ch;margin-bottom:clamp(12px,2.4vh,26px)}
   .lede strong{color:var(--ink)}
   .body-fill{flex:1;min-height:0;display:flex;flex-direction:column}
   .footer{
     display:flex;justify-content:space-between;align-items:center;
     padding-top:clamp(10px,1.8vh,18px);margin-top:clamp(10px,1.6vh,16px);
     border-top:1px solid var(--line-soft);
-    font-size:clamp(11px,1.5vh,14px);color:var(--faint);
+    font-size:clamp(11px,1.7vh,17px);color:var(--faint);
     font-family:var(--f-display);letter-spacing:.08em;text-transform:uppercase;font-weight:500;
   }
   .footer .src{letter-spacing:.02em;text-transform:none;font-family:var(--f-body);max-width:64%;margin-right:112px}
@@ -124,7 +124,7 @@
   }
   .tile .num small{font-size:.5em;font-weight:700;color:var(--muted);letter-spacing:0}
   .tile .num.acc{color:var(--crimson)}
-  .tile .lbl{margin-top:clamp(6px,1.2vh,12px);color:var(--muted);font-size:clamp(14px,2vh,17.5px);line-height:1.45;max-width:36ch}
+  .tile .lbl{margin-top:clamp(6px,1.3vh,14px);color:var(--muted);font-size:clamp(14px,2.3vh,23px);line-height:1.4;max-width:34ch}
   .tile .lbl b{color:var(--ink-2)}
   /* ============ two-col ============ */
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,44px);flex:1;min-height:0;align-items:stretch}
@@ -137,32 +137,32 @@
     display:flex;flex-direction:column;justify-content:center;
   }
   /* agenda / programa */
-  .agenda{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,24px);flex:1;min-height:0;align-content:center;grid-auto-rows:minmax(clamp(200px,40vh,340px),auto)}
+  .agenda{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,24px);flex:1;min-height:0;align-content:stretch}
   .ag{
     background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--crimson);
     border-radius:10px;padding:clamp(16px,2.6vh,28px) clamp(14px,1.6vw,24px);
-    display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(8px,1.3vh,14px);min-height:0;
+    display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,1.7vh,20px);min-height:0;
   }
   .ag .agn{
     font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vh,50px);
     color:var(--crimson);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;
   }
-  .ag h4{font-family:var(--f-display);font-weight:700;font-size:clamp(15px,2.2vh,20px);line-height:1.2;color:var(--ink)}
-  .ag p{color:var(--muted);font-size:clamp(12.5px,1.85vh,16px);line-height:1.5}
+  .ag h4{font-family:var(--f-display);font-weight:700;font-size:clamp(17px,2.75vh,27px);line-height:1.2;color:var(--ink)}
+  .ag p{color:var(--muted);font-size:clamp(14px,2.35vh,24px);line-height:1.45}
   /* unidades funcionales */
-  .units{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,26px);flex:1;min-height:0;align-content:center;grid-auto-rows:minmax(clamp(190px,36vh,320px),auto)}
+  .units{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,26px);flex:1;min-height:0;align-content:stretch}
   .unit{
     background:var(--surface);border:1px solid var(--line);border-radius:10px;
     padding:clamp(16px,2.8vh,30px) clamp(16px,1.9vw,28px);
-    display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(8px,1.3vh,14px);min-height:0;
+    display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,1.7vh,20px);min-height:0;
   }
   .unit .uk{
     align-self:flex-start;font-family:var(--f-display);font-weight:800;font-size:clamp(12px,1.7vh,15px);
     letter-spacing:.14em;color:var(--crimson);border:1px solid rgba(226,58,78,.45);
     background:rgba(226,58,78,.1);border-radius:3px;padding:5px 11px;
   }
-  .unit h4{font-family:var(--f-display);font-weight:700;font-size:clamp(15px,2.3vh,21px);line-height:1.22;color:var(--ink)}
-  .unit p{color:var(--muted);font-size:clamp(13px,1.95vh,17px);line-height:1.5}
+  .unit h4{font-family:var(--f-display);font-weight:700;font-size:clamp(17px,2.8vh,27px);line-height:1.22;color:var(--ink)}
+  .unit p{color:var(--muted);font-size:clamp(14px,2.35vh,24px);line-height:1.45}
   .unit p b{color:var(--ink-2)}
   /* lanzamiento de marca · Defensor Universitario */
   .launch .lockup{display:flex;flex-direction:column;align-items:flex-start}
@@ -188,15 +188,72 @@
   .slide.active.launch .brandname{animation:riseSoft .85s .32s both}
   .slide.active.launch .tagrule{animation:riseSoft .7s .58s both}
   .slide.active.launch .tagline{animation:riseSoft .8s .7s both}
+  /* recomendaciones interactivas */
+  .recgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.5vw,22px);flex:1;min-height:0;align-content:stretch}
+  .rec{
+    background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--crimson);
+    border-radius:10px;padding:clamp(16px,2.6vh,30px) clamp(16px,1.8vw,28px);
+    display:flex;flex-direction:column;justify-content:center;gap:clamp(9px,1.5vh,16px);
+    text-align:left;cursor:pointer;font-family:inherit;color:inherit;min-height:0;
+    transition:background .15s,border-color .15s,transform .15s;
+  }
+  .rec.wide{grid-column:span 3}
+  .rec:hover,.rec:focus-visible{background:var(--surface2);border-color:rgba(226,58,78,.6);border-left-color:var(--crimson);transform:translateY(-2px)}
+  .rec:focus-visible{outline:2px solid var(--crimson);outline-offset:3px}
+  .rec .rc{font-family:var(--f-display);font-weight:700;font-size:clamp(16px,2.6vh,26px);line-height:1.2;color:var(--ink)}
+  .rec .rn{font-size:clamp(12px,1.9vh,18px);color:var(--faint)}
+  .rec .rv{display:flex;flex-wrap:wrap;gap:8px}
+  .rec .rv em{
+    font-style:normal;font-family:var(--f-display);font-weight:800;
+    font-size:clamp(11px,1.75vh,16px);letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);
+    border:1px solid rgba(226,58,78,.45);background:rgba(226,58,78,.1);border-radius:3px;padding:5px 11px;
+  }
+  #recPanel[hidden]{display:none}
+  #recPanel{
+    position:fixed;inset:0;z-index:120;background:rgba(6,13,24,.86);
+    display:flex;align-items:center;justify-content:center;padding:clamp(20px,4vh,60px) clamp(20px,5vw,90px);
+    animation:fadeIn .2s both;
+  }
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .rp-box{
+    position:relative;background:var(--bg2);border:1px solid var(--line);border-top:4px solid var(--crimson);
+    border-radius:12px;padding:clamp(24px,4vh,48px) clamp(24px,3.4vw,56px);
+    max-width:1500px;width:100%;max-height:100%;overflow:auto;
+    box-shadow:0 30px 90px rgba(0,0,0,.6);animation:rise .3s both;
+  }
+  .rp-close{
+    position:absolute;top:clamp(14px,2vh,22px);right:clamp(14px,1.6vw,26px);
+    width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+    background:var(--surface);color:var(--ink-2);font-size:18px;cursor:pointer;
+  }
+  .rp-close:hover{border-color:var(--crimson);color:var(--ink)}
+  .rp-kicker{
+    font-family:var(--f-display);font-weight:800;font-size:clamp(11px,1.6vh,15px);
+    letter-spacing:.22em;text-transform:uppercase;color:var(--crimson);display:block;margin-bottom:8px;
+  }
+  .rp-head h3{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,4.2vh,42px);line-height:1.12;color:var(--ink);margin-bottom:clamp(14px,2.4vh,26px)}
+  .rp-list{margin:0;padding-left:clamp(22px,2vw,30px);display:flex;flex-direction:column;gap:clamp(12px,2vh,22px)}
+  .rp-list li{color:var(--ink-2);font-size:clamp(14px,2.35vh,23px);line-height:1.5}
+  .rp-list li::marker{color:var(--crimson);font-family:var(--f-display);font-weight:800}
+  .rp-list b{font-family:var(--f-display);font-weight:800;color:var(--crimson);letter-spacing:.04em}
+  /* conclusiones numeradas */
+  .msgs.concl{grid-template-columns:1fr 1fr}
+  .msg.wide{grid-column:span 2}
+  .msg .cn{
+    flex:0 0 auto;font-family:var(--f-display);font-weight:900;color:var(--crimson);
+    font-size:clamp(20px,3.4vh,34px);line-height:1;font-variant-numeric:tabular-nums;min-width:1.1em;
+  }
+  .dtable tr.tot td{border-top:1px solid var(--line);color:var(--ink);font-weight:700;padding-top:clamp(9px,1.5vh,15px)}
+  .dtable tr.tot td:first-child{font-family:var(--f-display)}
   /* casos: actores, demandas y derechos */
   .actorline{display:flex;gap:12px;align-items:baseline;margin-bottom:9px}
   .actorline:last-child{margin-bottom:0}
   .actorline .k{
     flex:0 0 auto;min-width:104px;font-family:var(--f-display);font-weight:800;
-    font-size:clamp(10px,1.42vh,12.5px);letter-spacing:.13em;text-transform:uppercase;color:var(--crimson);
+    font-size:clamp(10px,1.7vh,16px);letter-spacing:.13em;text-transform:uppercase;color:var(--crimson);
   }
-  .actorline .v{color:var(--ink-2);font-size:clamp(13px,1.95vh,17px);line-height:1.45}
-  .dlist{margin:0;padding-left:19px;color:var(--muted);font-size:clamp(13px,1.9vh,16.5px);line-height:1.5}
+  .actorline .v{color:var(--ink-2);font-size:clamp(13px,2.2vh,22px);line-height:1.4}
+  .dlist{margin:0;padding-left:20px;color:var(--muted);font-size:clamp(13px,2.2vh,22px);line-height:1.45}
   .dlist li{margin-bottom:6px}
   .dlist li:last-child{margin-bottom:0}
   .dlist li::marker{color:var(--crimson)}
@@ -204,32 +261,34 @@
   .rights .rg{
     display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);
     background:var(--surface);border-radius:999px;padding:clamp(7px,1.15vh,11px) clamp(14px,1.3vw,20px);
-    font-size:clamp(12px,1.8vh,15.5px);color:var(--muted);
+    font-size:clamp(12px,2.05vh,20px);color:var(--muted);
   }
   .rights .rg b{font-family:var(--f-display);font-weight:700;color:var(--ink)}
   .rights .rg .dotr{width:8px;height:8px;border-radius:50%;background:var(--teal);flex:0 0 8px}
   .rights .rg.alert{border-color:rgba(226,58,78,.55);background:var(--crimson-soft);color:var(--ink-2)}
   .rights .rg.alert .dotr{background:var(--crimson)}
   /* tabla de datos */
-  .dtable{width:100%;border-collapse:collapse;font-size:clamp(13px,1.95vh,17px)}
+  .chart-shell:has(.dtable){display:flex;flex-direction:column}
+  .dtable{width:100%;height:100%;border-collapse:collapse;font-size:clamp(13px,2.25vh,23px)}
+  .dtable tbody tr{height:1px}
   .dtable th{
     text-align:left;font-family:var(--f-display);font-weight:700;color:var(--muted);
-    font-size:clamp(11px,1.55vh,13.5px);letter-spacing:.1em;text-transform:uppercase;
+    font-size:clamp(11px,1.75vh,17px);letter-spacing:.1em;text-transform:uppercase;
     padding:0 10px 10px;border-bottom:1px solid var(--line);
   }
-  .dtable td{padding:clamp(7px,1.25vh,12px) 10px;color:var(--ink-2);border-bottom:1px solid var(--line-soft)}
+  .dtable td{padding:clamp(7px,1.35vh,15px) 10px;color:var(--ink-2);border-bottom:1px solid var(--line-soft)}
   .dtable .n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--f-display);font-weight:700}
   .dtable tr:last-child td{border-bottom:none}
   .dtable tr.hot td{color:var(--ink)}
   .dtable tr.hot td:first-child{box-shadow:inset 3px 0 0 var(--crimson)}
   /* deltas: antes → después */
-  .deltas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,24px);flex:1;min-height:0;align-content:center;grid-auto-rows:minmax(clamp(200px,38vh,330px),auto)}
+  .deltas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,24px);flex:1;min-height:0;align-content:stretch}
   .delta{
     background:var(--surface);border:1px solid var(--line);border-radius:10px;
     padding:clamp(16px,2.8vh,30px) clamp(16px,2vw,30px);
-    display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(8px,1.4vh,14px);min-height:0;
+    display:flex;flex-direction:column;justify-content:center;gap:clamp(9px,1.5vh,16px);min-height:0;
   }
-  .delta .dh{font-family:var(--f-display);font-weight:700;font-size:clamp(13px,1.9vh,17px);color:var(--ink-2);letter-spacing:.02em}
+  .delta .dh{font-family:var(--f-display);font-weight:700;font-size:clamp(13px,2.2vh,22px);color:var(--ink-2);letter-spacing:.02em}
   .delta .dv{display:flex;align-items:baseline;gap:clamp(6px,.9vw,14px);flex-wrap:nowrap;white-space:nowrap}
   .delta .from{
     font-family:var(--f-display);font-weight:800;font-size:clamp(19px,3.3vh,33px);
@@ -241,7 +300,7 @@
     font-family:var(--f-display);font-weight:900;font-size:clamp(32px,6.2vh,62px);
     color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em;
   }
-  .delta .dn{color:var(--muted);font-size:clamp(12.5px,1.85vh,16px);line-height:1.45}
+  .delta .dn{color:var(--muted);font-size:clamp(12.5px,2.15vh,21px);line-height:1.4}
   .delta .dn b{color:var(--ink-2)}
   .delta .drop{
     align-self:flex-start;font-family:var(--f-display);font-weight:800;
@@ -249,6 +308,9 @@
     color:var(--teal);border:1px solid rgba(31,160,184,.45);background:rgba(31,160,184,.1);
     border-radius:3px;padding:4px 10px;
   }
+  .cards.big .card h3{font-size:clamp(19px,3.2vh,33px);margin-bottom:10px}
+  .cards.big .card p{font-size:clamp(16px,2.85vh,29px);line-height:1.42}
+  .cards.big .card h3 .tag{font-size:clamp(12px,2vh,19px)}
   /* stat strip */
   .statstrip{
     display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,28px);
@@ -260,21 +322,21 @@
     font-family:var(--f-display);font-weight:900;color:var(--crimson);
     font-size:clamp(24px,4.4vh,44px);line-height:1;font-variant-numeric:tabular-nums;
   }
-  .statstrip span{color:var(--muted);font-size:clamp(12.5px,1.85vh,16px);line-height:1.4;max-width:32ch}
+  .statstrip span{color:var(--muted);font-size:clamp(12.5px,2.1vh,21px);line-height:1.35;max-width:30ch}
   .statstrip span em{font-style:normal;color:var(--ink-2)}
   .card h3{
-    font-family:var(--f-display);font-weight:700;font-size:clamp(16px,2.5vh,22px);
+    font-family:var(--f-display);font-weight:700;font-size:clamp(16px,2.75vh,27px);
     letter-spacing:.01em;margin-bottom:8px;display:flex;align-items:baseline;gap:10px;
   }
   .card h3 .tag{
     font-size:clamp(11px,1.5vh,14px);font-weight:800;letter-spacing:.12em;color:var(--crimson);
   }
-  .card p{color:var(--muted);font-size:clamp(14px,2.05vh,18px);line-height:1.55}
+  .card p{color:var(--muted);font-size:clamp(14px,2.35vh,24px);line-height:1.5}
   .card p b{color:var(--ink-2)}
   /* chart shells */
   .chart-shell{flex:1;min-height:0;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(12px,2vh,22px)}
   .chart-shell svg{display:block;width:100%;height:100%}
-  .chart-title{font-family:var(--f-display);font-weight:700;font-size:clamp(12px,1.7vh,15px);color:var(--ink-2);margin-bottom:4px}
+  .chart-title{font-family:var(--f-display);font-weight:700;font-size:clamp(12px,2.1vh,21px);color:var(--ink-2);margin-bottom:6px}
   .chart-note{font-size:clamp(11px,1.5vh,13px);color:var(--faint)}
   .tooltip{
     position:absolute;pointer-events:none;background:#060D18;border:1px solid var(--line);
@@ -283,7 +345,7 @@
     font-variant-numeric:tabular-nums;box-shadow:0 6px 20px rgba(0,0,0,.45);
   }
   .tooltip b{color:var(--ink)}
-  .legend{display:flex;gap:18px;font-size:clamp(11px,1.55vh,13.5px);color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+  .legend{display:flex;gap:22px;font-size:clamp(11px,1.9vh,18px);color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
   .legend .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
   /* phases curve */
   .phase-wrap{flex:1;min-height:0;position:relative}
@@ -297,9 +359,9 @@
     background:var(--bg);border:2px solid var(--muted);
   }
   .tl-item.hot::before{border-color:var(--crimson);background:var(--crimson)}
-  .tl-item .yr{font-family:var(--f-display);font-weight:800;color:var(--crimson);font-size:clamp(15px,2.3vh,20px);margin-right:10px;font-variant-numeric:tabular-nums}
-  .tl-item .tx{color:var(--ink-2);font-size:clamp(13.5px,2.1vh,18px)}
-  .tl-item .tx small{color:var(--faint);display:block;font-size:clamp(12px,1.7vh,15px)}
+  .tl-item .yr{font-family:var(--f-display);font-weight:800;color:var(--crimson);font-size:clamp(15px,2.5vh,25px);margin-right:10px;font-variant-numeric:tabular-nums}
+  .tl-item .tx{color:var(--ink-2);font-size:clamp(13.5px,2.3vh,23px)}
+  .tl-item .tx small{color:var(--faint);display:block;font-size:clamp(12px,1.95vh,19px)}
   /* big statement slide */
   .statement{justify-content:center}
   .statement .big{
@@ -308,22 +370,22 @@
   }
   .statement .big em{font-style:normal;color:var(--crimson)}
   /* model steps */
-  .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1vw,14px);flex:0 0 auto;align-content:start}
+  .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1vw,14px);flex:1;min-height:0;align-content:stretch}
   .step{
     background:var(--surface);border:1px solid var(--line);border-radius:10px;
-    padding:clamp(16px,2.6vh,26px) clamp(11px,1.3vw,18px);display:flex;flex-direction:column;justify-content:flex-start;gap:10px;min-height:clamp(150px,26vh,230px);position:relative;
+    padding:clamp(16px,2.6vh,26px) clamp(11px,1.3vw,18px);display:flex;flex-direction:column;justify-content:flex-start;gap:10px;min-height:0;position:relative;
   }
   .step .n{
     font-family:var(--f-display);font-weight:900;font-size:clamp(26px,4.6vh,44px);color:var(--crimson);
     font-variant-numeric:tabular-nums;line-height:1;
   }
-  .step h4{font-family:var(--f-display);font-weight:700;font-size:clamp(13px,2vh,18px);letter-spacing:.04em;text-transform:uppercase}
-  .step p{color:var(--muted);font-size:clamp(12.5px,1.8vh,15.5px);line-height:1.5}
+  .step h4{font-family:var(--f-display);font-weight:700;font-size:clamp(13px,2.2vh,21px);letter-spacing:.04em;text-transform:uppercase}
+  .step p{color:var(--muted);font-size:clamp(12.5px,2vh,19px);line-height:1.45}
   /* key messages */
   .msgs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.6vh,16px);flex:1;min-height:0;align-content:stretch}
   .msg{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(12px,2vh,20px) clamp(14px,1.6vw,22px)}
   .msg .mk{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--crimson)}
-  .msg p{color:var(--ink-2);font-size:clamp(15px,2.25vh,19px)}
+  .msg p{color:var(--ink-2);font-size:clamp(15px,2.5vh,25px);line-height:1.45}
   .msg p b{color:var(--ink)}
   /* ============ dynamics: staggered reveals ============ */
   @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -611,7 +673,7 @@
       <div class="tile"><div class="num">64<small> %</small></div><div class="lbl">de los casos tuvo <b>intervención activa de la Defensoría</b>: colaboración, observación, supervisión o mediación</div></div>
       <div class="tile"><div class="num">147</div><div class="lbl"><b>casos</b> con la Defensoría actuando como <b>mediadora o facilitadora</b> del diálogo</div></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Tercero neutral</h3>
         <p>La Defensoría no defiende a una parte: <b>defiende derechos y el proceso de diálogo</b>. Su imparcialidad es lo que le permite sentar a todos en la mesa.</p>
@@ -643,7 +705,7 @@
       <div class="tl-item hot"><span class="yr">2025</span><span class="tx">Lineamientos de <b>mediación</b> y de <b>gestión de alertas</b>; nuevo ROF</span></div>
       <div class="tl-item hot"><span class="yr">2026</span><span class="tx"><b>Directiva de Gestión Integral de Conflictos Sociales</b> (N.° 0001-2026-DP/PAD)<small>Aprobada el 10 de agosto de 2026 — reemplaza el marco de 2014–2015</small></span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Qué más trajo la Ley N.° 32028</h3>
         <p>La <b>conflictividad</b> como criterio para abrir oficinas defensoriales; <b>interoperabilidad</b> obligatoria: las entidades del Estado deben dar acceso a su información; y transformación digital para <b>alertas tempranas en tiempo real</b>.</p>
@@ -689,7 +751,7 @@
   <h2>De reaccionar a la crisis, a gestionarla antes de que ocurra</h2>
   <p class="lede">La <strong>Directiva N.° 0001-2026-DP/PAD</strong> ordena en un solo instrumento toda la intervención defensorial, sobre cuatro ejes:</p>
   <div class="body-fill">
-    <div class="cards" style="grid-template-columns:1fr 1fr;flex:1;align-content:stretch">
+    <div class="cards big" style="grid-template-columns:1fr 1fr;flex:1;align-content:stretch">
       <div class="card">
         <h3><span class="tag">EJE 1</span> Prevención</h3>
         <p><b>Alertas tempranas</b> y matrices de riesgo social: advertir antes de que la protesta escale. Alertas de riesgo alto se registran de inmediato; casos nuevos, en 24 horas.</p>
@@ -715,7 +777,7 @@
 <section class="slide" aria-label="Modelo integral">
   <div class="eyebrow">03 · El modelo en una línea</div>
   <h2>Seis verbos para gestionar un conflicto</h2>
-  <div class="body-fill" style="justify-content:center;gap:clamp(16px,3vh,34px)">
+  <div class="body-fill" style="gap:clamp(14px,2.6vh,28px)">
   <div class="steps">
     <div class="step"><div class="n">1</div><h4>Monitorear</h4><p>Información territorial permanente y en tiempo real</p></div>
     <div class="step"><div class="n">2</div><h4>Alertar</h4><p>Advertir a tiempo para prevenir el escalamiento</p></div>
@@ -740,7 +802,7 @@
       <div class="tl-item"><span class="yr">2016–2023</span><span class="tx">Digitalización: bases de datos, tableros y mapas interactivos</span></div>
       <div class="tl-item hot"><span class="yr">2024–2026</span><span class="tx"><b>Observatorio de Conflictividad Social (OCS)</b>: registro obligatorio, continuo y en tiempo real<small>Plataforma oficial para registrar, analizar y visualizar la conflictividad de todo el país</small></span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Dónde está hoy</h3>
         <p>Desplegado por <b>fases</b>: infraestructura y seguridad, procesos clave, análisis y visualización. Desde <b>febrero de 2026</b> corre un <b>piloto en 11 oficinas defensoriales</b>, previo al despliegue nacional.</p>
@@ -777,9 +839,9 @@
 <section class="slide cover" aria-label="Segunda parte">
   <div class="bgvid-wrap"><video class="bgvid" autoplay muted loop playsinline></video><div class="veil"></div></div>
   <img class="dp-logo" alt="Defensoría del Pueblo">
-  <div class="cover-badge"><span>Informe Defensorial · 2023 – 2025</span></div>
-  <h1 class="cover-title" style="font-size:clamp(38px,9vh,88px);max-width:14ch">Universidades <span class="al">en conflicto</span></h1>
-  <p class="cover-sub">Análisis de la protesta y su impacto en los derechos fundamentales</p>
+  <div class="cover-badge"><span>Informe Defensorial n.°&nbsp;___</span></div>
+  <h1 class="cover-title" style="font-size:clamp(32px,7.4vh,74px);max-width:19ch">Análisis de las acciones colectivas de protesta <span class="al">y su impacto en los derechos fundamentales</span></h1>
+  <p class="cover-sub">2023 – 2025</p>
   <div class="cover-org">
     <b>Y el Proyecto Defensor Universitario</b>
     <span>Fortalecimiento de la prevención de conflictos sociales en universidades</span>
@@ -795,29 +857,29 @@
     <div class="tile"><div class="num acc">465</div><div class="lbl"><b>acciones colectivas de protesta</b> registradas en universidades del país</div></div>
     <div class="tile"><div class="num">55</div><div class="lbl"><b>universidades</b> con al menos una protesta en el periodo</div></div>
     <div class="tile"><div class="num">26</div><div class="lbl"><b>regiones</b> con protesta universitaria: todas, sin excepción</div></div>
-    <div class="tile"><div class="num">13</div><div class="lbl"><b>casos de conflicto social</b> gestionados por la Defensoría; 5 llegaron a crisis</div></div>
-    <div class="tile"><div class="num">792</div><div class="lbl"><b>días acumulados</b> de toma de local en 27 universidades</div></div>
+    <div class="tile"><div class="num">74</div><div class="lbl"><b>tomas de local</b> registradas en 27 universidades</div></div>
+    <div class="tile"><div class="num">792</div><div class="lbl"><b>días acumulados</b> de universidades tomadas</div></div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — Adjuntía para la Prevención de Conflictos Sociales y la Gobernabilidad</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — Adjuntía para la Prevención de Conflictos Sociales y la Gobernabilidad</span></div>
 </section>
 
 <!-- P2 · SISTEMA UNIVERSITARIO -->
 <section class="slide" aria-label="Sistema universitario">
   <div class="eyebrow">Informe defensorial · El sistema</div>
-  <h2>143 universidades, un sistema bajo tensión</h2>
+  <h2>148 universidades, un sistema bajo tensión</h2>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-title">Presupuesto público en universidades públicas (S/ millones)</div>
       <div class="chart-shell" id="uPresChart"></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>El licenciamiento partió el mapa</h3>
-        <p>De 143 universidades, <b>100 cuentan con licenciamiento vigente</b> y 43 lo tienen denegado. La Sunedu, creada por la Ley Universitaria N.° 30220 (2014), marcó el estándar.</p>
+        <p>De 148 universidades, <b>107 cuentan con licenciamiento vigente</b> y 41 lo tienen denegado. La Sunedu, creada por la Ley Universitaria N.° 30220 (2014), marcó el estándar.</p>
       </div>
       <div class="card">
         <h3>Más presupuesto, más repartido</h3>
-        <p>El presupuesto creció <b>53 %</b> entre 2017 y 2026, pero las universidades financiadas pasaron de 49 a 67: el gasto por institución <b>se diluyó</b>.</p>
+        <p>El presupuesto creció <b>53 %</b> entre 2017 y 2026, pero las universidades financiadas pasaron de 49 a 67: <b>el gasto promedio por institución se diluyó</b>.</p>
       </div>
       <div class="card">
         <h3>El rezago que no se cierra</h3>
@@ -825,14 +887,14 @@
       </div>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Ley Universitaria N.° 30220 · DIGESU–Minedu · Sunedu · Presupuesto público 2017–2026</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Ley Universitaria N.° 30220 · DIGESU–Minedu · Sunedu · Presupuesto público 2017–2026</span></div>
 </section>
 
 <!-- P2 · PROBLEMAS ESTRUCTURALES -->
 <section class="slide" aria-label="Problemas estructurales">
   <div class="eyebrow">Informe defensorial · La raíz</div>
-  <h2>Cuatro problemas que están detrás de casi toda protesta</h2>
-  <div class="cards" style="grid-template-columns:1fr 1fr;flex:1;align-content:stretch">
+  <h2>Tres problemas que están detrás de casi toda protesta</h2>
+  <div class="cards big" style="grid-template-columns:repeat(3,1fr);flex:1;align-content:stretch">
     <div class="card">
       <h3><span class="tag">01</span> Presupuesto insuficiente</h3>
       <p>El gasto promedio por universidad pública <b>se estancó</b> pese al alza nominal del presupuesto entre 2017 y 2026.</p>
@@ -843,21 +905,17 @@
     </div>
     <div class="card">
       <h3><span class="tag">03</span> Situación docente y salarial</h3>
-      <p>Incumplimiento de la <b>homologación remunerativa</b> con el Poder Judicial (Ley N.° 30220, art. 96), pendiente desde 1983.</p>
-    </div>
-    <div class="card">
-      <h3><span class="tag">04</span> Deserción e investigación</h3>
-      <p><b>12,3 %</b> de interrupción temprana de estudios y una inversión en I+D muy por debajo del promedio de la OCDE.</p>
+      <p><b>Limitado cumplimiento en el aumento salarial</b> correspondiente a la homologación remunerativa con el Poder Judicial (Ley N.° 30220, art. 96).</p>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo I, balance general del sistema universitario</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo I, balance general del sistema universitario</span></div>
 </section>
 
 <!-- P2 · EVOLUCIÓN TEMPORAL -->
 <section class="slide" aria-label="Evolución temporal">
   <div class="eyebrow">Informe defensorial · Cuándo</div>
   <h2>La protesta universitaria tiene calendario</h2>
-  <p class="lede">Casi la mitad de las protestas del periodo ocurrió en <strong>2023</strong>. Y cada año se repiten dos picos: <strong>junio</strong>, con estudiantes, y <strong>noviembre</strong>, con docentes.</p>
+  <p class="lede">Casi la mitad de las protestas del periodo ocurrió en <strong>2023</strong>. Y cada año se repiten dos picos: <strong>junio</strong>, con estudiantes, y <strong>octubre y noviembre</strong>, con docentes.</p>
   <div class="cols" style="grid-template-columns:.85fr 1.4fr">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-title">Protestas por año</div>
@@ -868,47 +926,53 @@
       <div class="chart-shell" id="uMonthChart"></div>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">465 acciones colectivas de protesta · Oct. 2023: la FENDUP lideró 71 de 73 protestas del mes</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">465 acciones colectivas de protesta · Oct. 2023: la FENDUP lideró 71 de 73 protestas del mes</span></div>
 </section>
 
 <!-- P2 · DOS PICOS -->
 <section class="slide" aria-label="Los dos picos">
   <div class="eyebrow">Informe defensorial · Cuándo</div>
-  <h2>Dos picos, dos actores, dos lógicas</h2>
-  <div class="deltas" style="grid-template-columns:1fr 1fr">
+  <h2>Junio con estudiantes; octubre y noviembre con docentes</h2>
+  <div class="deltas">
     <div class="delta">
-      <div class="dh">Junio · el pico estudiantil</div>
+      <div class="dh">Junio · pico estudiantil</div>
       <div class="dv"><span class="to">55 %</span></div>
-      <div class="drop">30 de 54 protestas de junio</div>
+      <div class="drop">30 de 54 protestas del mes</div>
       <div class="dn">Cerca del <b>cierre del semestre académico</b>, los estudiantes exigen mejoras en gestión educativa, infraestructura y servicios.</div>
     </div>
     <div class="delta">
-      <div class="dh">Noviembre · el pico docente</div>
+      <div class="dh">Octubre 2023 · pico docente</div>
+      <div class="dv"><span class="to">97 %</span></div>
+      <div class="drop">71 de 73 protestas del mes</div>
+      <div class="dn">El mes más intenso de todo el periodo: la <b>FENDUP</b> concentró prácticamente la totalidad de las protestas registradas.</div>
+    </div>
+    <div class="delta">
+      <div class="dh">Noviembre 2023 · pico docente</div>
       <div class="dv"><span class="to">75 %</span></div>
-      <div class="drop">40 de 53 demandas de noviembre de 2023</div>
+      <div class="drop">40 de 53 demandas del mes</div>
       <div class="dn">En pleno <b>debate presupuestal del Congreso</b>, los docentes exigen la homologación remunerativa con los jueces del Poder Judicial.</div>
     </div>
   </div>
   <p class="lede" style="margin:clamp(12px,2.2vh,22px) 0 0">Los dos picos coinciden con hitos del calendario: el <strong>cierre del semestre académico</strong>, en el caso de los estudiantes, y el <strong>debate presupuestal en el Congreso</strong>, en el de los docentes.</p>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo II, análisis temporal de las protestas</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo II, análisis temporal de las protestas</span></div>
 </section>
 
 <!-- P2 · TERRITORIO -->
 <section class="slide" aria-label="Territorio universitario">
   <div class="eyebrow">Informe defensorial · Dónde</div>
-  <h2>Dieciséis universidades concentran el 70 %</h2>
+  <h2>Distribución territorial de la protesta</h2>
   <div class="cols">
     <div style="display:flex;flex-direction:column;min-height:0">
-      <div class="chart-title">Regiones con más protestas</div>
+      <div class="chart-title">Lima Metropolitana concentra la mayor cantidad de protestas</div>
       <div class="chart-shell" id="uRegChart"></div>
     </div>
     <div style="display:flex;flex-direction:column;min-height:0">
-      <div class="chart-title">Universidades con más protestas</div>
+      <div class="chart-title">Dieciséis universidades concentran el 70 %</div>
       <div class="chart-shell" id="uTopChart"></div>
     </div>
   </div>
   <p class="lede" style="margin:clamp(12px,2.2vh,22px) 0 0"><strong>16 de las 55 universidades</strong> concentran 326 de las 465 protestas. Ese grupo es la población prioritaria para la prevención defensorial.</p>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Se registró al menos una protesta en las 26 regiones del país</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Se registró al menos una protesta en las 26 regiones del país</span></div>
 </section>
 
 <!-- P2 · ACTORES -->
@@ -919,7 +983,7 @@
   <div class="cards" style="grid-template-columns:1fr 1fr 1fr;flex:1;align-content:stretch;margin-top:clamp(12px,2.2vh,22px)">
     <div class="card">
       <h3>Estudiantes · 45,2 %</h3>
-      <p>Se organizan mediante <b>federaciones de estudiantes</b> y centros federados, con mesas directivas plurales por facultad.</p>
+      <p>Suelen ser organizadas por las <b>federaciones de estudiantes y centros federados</b>, con mesas directivas plurales por facultad.</p>
     </div>
     <div class="card">
       <h3>Docentes · 39,4 %</h3>
@@ -930,18 +994,18 @@
       <p>Administrativos y obreros organizados en sindicatos, con demandas sobre <b>condiciones laborales y remuneraciones</b>.</p>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">465 acciones colectivas de protesta, según actor demandante</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">465 acciones colectivas de protesta, según actor demandante</span></div>
 </section>
 
 <!-- P2 · DEMANDAS -->
 <section class="slide" aria-label="Tipos de demanda">
   <div class="eyebrow">Informe defensorial · Qué exigen</div>
-  <h2>Dinero y gestión: el 70 % de las demandas</h2>
+  <h2>Mejores remuneraciones y gestión educativa: el 69 % de las demandas</h2>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-shell" id="uDemChart"></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Dos motores distintos</h3>
         <p>Los <b>docentes</b> reclaman remuneraciones: nivelación y homologación. Los <b>estudiantes</b> cuestionan la gestión educativa: infraestructura, servicios y transparencia.</p>
@@ -952,19 +1016,19 @@
       </div>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo II, tipos de demanda en protestas</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo II, tipos de demanda en protestas</span></div>
 </section>
 
 <!-- P2 · DESTINATARIOS -->
 <section class="slide" aria-label="Actores demandados">
   <div class="eyebrow">Informe defensorial · A quién</div>
-  <h2>Cada actor golpea una puerta distinta</h2>
+  <h2>Cada actor recurre a una entidad distinta</h2>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-title">Acciones de protesta según actor demandado</div>
       <div class="chart-shell" id="uDirChart"></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Los estudiantes miran a su universidad</h3>
         <p>El <b>48 %</b> de las demandas se dirige a las autoridades universitarias — sobre todo desde el estudiantado (169 casos).</p>
@@ -973,28 +1037,28 @@
         <h3>Los docentes miran al Estado</h3>
         <p>El <b>35 %</b> apunta al Poder Ejecutivo — Minedu y MEF — principalmente desde los docentes (132 casos), y un <b>13 %</b> al Congreso.</p>
       </div>
-      <div class="card">
-        <h3>Por qué importa</h3>
-        <p>La solución rara vez está en una sola mesa: exige <b>articular universidad, Ejecutivo y Congreso</b> a la vez.</p>
-      </div>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo II, actores demandados</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo II, actores demandados</span></div>
 </section>
 
 <!-- P2 · FORMAS DE PROTESTA -->
 <section class="slide" aria-label="Formas de protesta">
   <div class="eyebrow">Informe defensorial · Cómo</div>
-  <h2>La mitad son plantones — pero una de cada cinco es violenta</h2>
+  <h2>El 78 % de las protestas universitarias son pacíficas</h2>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-title">Formas de protesta (% del total)</div>
       <div class="chart-shell" id="uForChart"></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
+      <div class="card">
+        <h3>Plantones y marchas dominan</h3>
+        <p>La mitad de las protestas son <b>plantones o concentraciones</b> y un 16 % son marchas: modalidades que no afectan derechos de terceros.</p>
+      </div>
       <div class="card" style="border-color:rgba(226,58,78,.5);background:var(--crimson-soft)">
-        <h3>22 % de medidas violentas</h3>
-        <p>100 de las 465 protestas universitarias fueron violentas, frente a un promedio de <b>12 % en el conjunto de conflictos sociales del país</b>. La protesta universitaria es casi el doble de violenta.</p>
+        <h3>El 22 % restante fue de tipo violento</h3>
+        <p>100 de las 465 protestas <b>fueron de tipo violento</b>, frente a un promedio de <b>12 % en el conjunto de conflictos sociales del país</b>.</p>
       </div>
       <div class="card">
         <h3>Y la toma de local manda</h3>
@@ -1002,22 +1066,38 @@
       </div>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo II, formas de protesta universitaria</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo II, formas de protesta universitaria</span></div>
 </section>
 
 <!-- P2 · TOMAS DE LOCAL -->
 <section class="slide" aria-label="Tomas de local">
   <div class="eyebrow">Informe defensorial · El costo</div>
-  <h2>792 días de universidades cerradas</h2>
+  <h2>74 tomas de local, 792 días de universidades cerradas</h2>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
-      <div class="chart-title">Días acumulados de toma de local, 2023–2025 (10 primeras)</div>
-      <div class="chart-shell" id="uTomaChart"></div>
+      <div class="chart-title">Universidades con mayor cantidad de tomas de local (2023–2025)</div>
+      <div class="chart-shell">
+        <table class="dtable">
+          <thead><tr><th>Universidad</th><th class="n">Tomas</th><th class="n">Días</th></tr></thead>
+          <tbody>
+            <tr class="hot"><td>U.N. de Cajamarca</td><td class="n">10</td><td class="n">71</td></tr>
+            <tr class="hot"><td>U.N. San Antonio Abad del Cusco</td><td class="n">8</td><td class="n">69</td></tr>
+            <tr class="hot"><td>U.N. del Altiplano</td><td class="n">7</td><td class="n">102</td></tr>
+            <tr><td>U.N. Mayor de San Marcos</td><td class="n">6</td><td class="n">14</td></tr>
+            <tr><td>U.N. del Centro del Perú</td><td class="n">5</td><td class="n">69</td></tr>
+            <tr><td>U.N. San Luis Gonzaga</td><td class="n">4</td><td class="n">77</td></tr>
+            <tr><td>U.N. de Huancavelica</td><td class="n">4</td><td class="n">21</td></tr>
+            <tr><td>U.N. Intercultural de la Amazonía</td><td class="n">3</td><td class="n">3</td></tr>
+            <tr><td>U.N. Santiago Antúnez de Mayolo</td><td class="n">3</td><td class="n">3</td></tr>
+            <tr class="tot"><td>Total · 27 universidades</td><td class="n">74</td><td class="n">792</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Y va en aumento</h3>
-        <p>De 297 días en 2023 se bajó a 120 en 2024 — pero <b>2025 cerró con 375 días</b>, más del triple que el año anterior. En total, 27 universidades afectadas.</p>
+        <p>De <b>22 tomas</b> en 2023 se pasó a 21 en 2024 y a <b>31 en 2025</b>. En días: 297, luego 120, y <b>375 en 2025</b> — más del triple que el año anterior.</p>
       </div>
       <div class="card" style="border-color:rgba(226,58,78,.5);background:var(--crimson-soft)">
         <h3>Cada día cerrado es un derecho suspendido</h3>
@@ -1025,7 +1105,7 @@
       </div>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — 792 días acumulados de toma de local en 27 universidades</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Tabla n.° 17 — Número de medidas de toma de local universitario y días acumulados, por universidad · Fuente: Defensoría del Pueblo</span></div>
 </section>
 
 <!-- P2 · LOS CINCO CASOS -->
@@ -1060,20 +1140,20 @@
       <p><b>16 regiones</b> · Homologación salarial e incremento presupuestal. Octubre 2025.</p>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo III, afectación de derechos fundamentales</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo III, afectación de derechos fundamentales</span></div>
 </section>
 
 <!-- P2 · CASO 1 SAN MARCOS -->
 <section class="slide" aria-label="Caso San Marcos">
   <div class="eyebrow">Informe defensorial · Caso 1 de 5 · Institucionalizada</div>
-  <h2>San Marcos: cuatro días de toma, tres días para resolver</h2>
+  <h2>San Marcos: cuatro días de toma</h2>
   <div class="cols c31">
     <div class="timeline">
       <div class="tl-item hot"><span class="yr">10 set.</span><span class="tx">La FUSM inicia <b>toma de local indefinida</b></span></div>
       <div class="tl-item"><span class="yr">10–12 set.</span><span class="tx">Clases virtualizadas y <b>reprogramación del examen de admisión</b></span></div>
       <div class="tl-item hot"><span class="yr">13 set.</span><span class="tx"><b>Mesa de diálogo mediada por la Defensoría</b> y entrega del local</span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Actores</h3>
         <div class="actorline"><span class="k">Demandante</span><span class="v">Federación Universitaria de San Marcos (FUSM)</span></div>
@@ -1094,7 +1174,7 @@
     <span class="rg"><span class="dotr"></span><b>Libre tránsito</b> · campus restringido</span>
     <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos, comerciantes y concesionarios</span>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Universidad Nacional Mayor de San Marcos · Lima Metropolitana · Setiembre 2025</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Universidad Nacional Mayor de San Marcos · Lima Metropolitana · Setiembre 2025</span></div>
 </section>
 
 <!-- P2 · CASO 2 ALTIPLANO -->
@@ -1109,7 +1189,7 @@
       <div class="tl-item"><span class="yr">26 ago.</span><span class="tx"><b>Seguimiento defensorial</b> del cumplimiento de acuerdos</span></div>
       <div class="tl-item"><span class="yr">12 set.</span><span class="tx">Nueva protesta de cinco escuelas; se levanta tras diálogo con el rector</span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Actores</h3>
         <div class="actorline"><span class="k">Demandante</span><span class="v">Estudiantes de distintas escuelas profesionales</span></div>
@@ -1132,13 +1212,13 @@
     <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos y concesionarios</span>
     <span class="rg alert"><span class="dotr"></span><b>Salud e integridad física</b> · dos heridos, una estudiante con lesiones graves</span>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Universidad Nacional del Altiplano · Puno · Junio y setiembre 2025 · 102 días de toma en el periodo</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Universidad Nacional del Altiplano · Puno · Junio y setiembre 2025 · 102 días de toma en el periodo</span></div>
 </section>
 
 <!-- P2 · CASO 3 TAYACAJA -->
 <section class="slide" aria-label="Caso Tayacaja">
   <div class="eyebrow">Informe defensorial · Caso 3 de 5 · Comisión organizadora</div>
-  <h2>Tayacaja: cuando el conflicto sale del campus</h2>
+  <h2>Tayacaja: cuando el conflicto se extiende fuera del campus</h2>
   <div class="cols c31">
     <div class="timeline">
       <div class="tl-item hot"><span class="yr">30 set.</span><span class="tx"><b>Huelga indefinida y toma de local</b></span></div>
@@ -1147,7 +1227,7 @@
       <div class="tl-item"><span class="yr">8 oct.</span><span class="tx">Se publica la reconformación de la Comisión Organizadora</span></div>
       <div class="tl-item hot"><span class="yr">10 oct.</span><span class="tx">Se levanta la toma tras la mesa de diálogo</span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Actores</h3>
         <div class="actorline"><span class="k">Demandante</span><span class="v">Federación de Estudiantes de la UNAT, con respaldo de trabajadores de construcción civil y de la población de Tayacaja</span></div>
@@ -1165,11 +1245,11 @@
     </div>
   </div>
   <div class="rights">
-    <span class="rg"><span class="dotr"></span><b>Educación</b> · 10 días de toma de local</span>
+    <span class="rg"><span class="dotr"></span><b>Educación</b> · 9 días de toma de local</span>
     <span class="rg alert"><span class="dotr"></span><b>Libre tránsito</b> · 8 días de bloqueo de vía interregional</span>
     <span class="rg"><span class="dotr"></span><b>Trabajo</b> · transporte y actividad comercial de la zona</span>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">U.N. Autónoma de Tayacaja Daniel Hernández Morillo · Huancavelica · Setiembre–octubre 2025</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">U.N. Autónoma de Tayacaja Daniel Hernández Morillo · Huancavelica · Setiembre–octubre 2025</span></div>
 </section>
 
 <!-- P2 · CASO 4 JAÉN -->
@@ -1184,7 +1264,7 @@
       <div class="tl-item hot"><span class="yr">30 oct.</span><span class="tx"><b>Mesa de diálogo mediada por la Defensoría</b> y suscripción de acuerdos</span></div>
       <div class="tl-item"><span class="yr">4 nov.</span><span class="tx">Se levanta la toma y se reinician las actividades académicas</span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Actores</h3>
         <div class="actorline"><span class="k">Demandante</span><span class="v">Federación de Estudiantes</span></div>
@@ -1204,7 +1284,7 @@
     <span class="rg"><span class="dotr"></span><b>Libre tránsito</b> · campus restringido</span>
     <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos, comerciantes y concesionarios</span>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Universidad Nacional de Jaén · Cajamarca · Octubre–noviembre 2024</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Universidad Nacional de Jaén · Cajamarca · Octubre–noviembre 2024</span></div>
 </section>
 
 <!-- P2 · CASO 5 FENDUP -->
@@ -1220,7 +1300,7 @@
       <div class="tl-item"><span class="yr">23 nov.</span><span class="tx">Varias universidades levantan sus medidas</span></div>
       <div class="tl-item hot"><span class="yr">11 dic.</span><span class="tx">La FENDUP declara el <b>fin oficial de la huelga</b></span></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card">
         <h3>Actores</h3>
         <div class="actorline"><span class="k">Demandante</span><span class="v">Federación Nacional de Docentes Universitarios del Perú (FENDUP)</span></div>
@@ -1242,21 +1322,21 @@
     <span class="rg"><span class="dotr"></span><b>Libre tránsito</b> · campus afectados</span>
     <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos y concesionarios de las sedes</span>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Federación Nacional de Docentes Universitarios del Perú · 16 regiones · Octubre–diciembre 2025</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Federación Nacional de Docentes Universitarios del Perú · 16 regiones · Octubre–diciembre 2025</span></div>
 </section>
 
 <!-- P2 · DERECHOS -->
 <section class="slide" aria-label="Derechos afectados">
   <div class="eyebrow">Informe defensorial · El impacto</div>
-  <h2>Qué derechos se pierden cuando una universidad se cierra</h2>
-  <div class="cards" style="grid-template-columns:repeat(4,1fr);flex:1;align-content:stretch">
+  <h2>Qué derechos se suspenden cuando una universidad se cierra</h2>
+  <div class="cards big" style="grid-template-columns:repeat(4,1fr);flex:1;align-content:stretch">
     <div class="card">
       <h3>Educación</h3>
-      <p>Paralización o virtualización de clases, reprogramación de exámenes de admisión y pérdida de horas académicas que rara vez se recuperan.</p>
+      <p>Paralización o virtualización de clases, reprogramación de exámenes de admisión y pérdida de horas académicas.</p>
     </div>
     <div class="card">
       <h3>Libre tránsito</h3>
-      <p>Restricción del ingreso y desplazamiento en el campus y, en casos como Tayacaja, <b>bloqueo de carreteras interregionales</b> durante ocho días.</p>
+      <p>Restricción del ingreso y desplazamiento en el campus y, en casos como Tayacaja, <b>bloqueo de carreteras interregionales</b>.</p>
     </div>
     <div class="card">
       <h3>Trabajo</h3>
@@ -1267,55 +1347,68 @@
       <p>Cuando hay enfrentamiento, el costo son <b>personas heridas</b>. Es el umbral que la intervención preventiva busca evitar.</p>
     </div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — capítulo III, análisis de la afectación de derechos fundamentales</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo III, análisis de la afectación de derechos fundamentales</span></div>
 </section>
 
 <!-- P2 · CONCLUSIONES -->
 <section class="slide" aria-label="Conclusiones del informe">
   <div class="eyebrow">Informe defensorial · Conclusiones</div>
-  <h2>Lo que el informe deja en claro</h2>
-  <div class="msgs">
-    <div class="msg"><span class="mk"></span><p>La conflictividad universitaria responde a <b>problemas estructurales</b>: déficit presupuestal, brechas de infraestructura e incumplimiento salarial docente.</p></div>
-    <div class="msg"><span class="mk"></span><p>465 protestas en 55 universidades, concentradas en <b>junio y noviembre</b>, con estudiantes (45 %) y docentes (39 %) como principales actores.</p></div>
-    <div class="msg"><span class="mk"></span><p>Las demandas siguen <b>lógicas diferenciadas</b>: los docentes buscan mejoras remunerativas; los estudiantes cuestionan la gestión educativa.</p></div>
-    <div class="msg"><span class="mk"></span><p>La mitad son plantones, pero el <b>16 % son tomas de local</b>, protagonizadas por estudiantes y con alto costo en derechos.</p></div>
-    <div class="msg"><span class="mk"></span><p>La intervención de la Defensoría del Pueblo <b>contribuyó decisivamente al desescalamiento</b> de los conflictos analizados.</p></div>
-    <div class="msg"><span class="mk"></span><p>La institucionalización de una universidad pública toma en promedio <b>18,75 años</b>: la interinidad es en sí misma un factor de conflictividad.</p></div>
+  <h2>Conclusiones</h2>
+  <div class="msgs concl">
+    <div class="msg"><span class="cn">1</span><p>La conflictividad universitaria responde a <b>problemas estructurales</b>: déficit presupuestal, brechas de infraestructura y limitaciones en el aumento de remuneraciones de los docentes universitarios.</p></div>
+    <div class="msg"><span class="cn">2</span><p>465 protestas en 55 universidades, concentradas en <b>junio, octubre y noviembre</b>, con estudiantes (45 %) y docentes (39 %) como principales actores.</p></div>
+    <div class="msg"><span class="cn">3</span><p>Las demandas siguen <b>lógicas diferenciadas</b>: los docentes buscan mejoras remunerativas; los estudiantes cuestionan la gestión educativa.</p></div>
+    <div class="msg"><span class="cn">4</span><p>El 78 % de las protestas son pacíficas, pero el <b>16 % son tomas de local</b>, protagonizadas por estudiantes.</p></div>
+    <div class="msg"><span class="cn">5</span><p>Los casos analizados evidencian que la <b>toma de locales universitarios</b>, como medida de protesta, puede generar afectaciones a los derechos a la <b>educación, libre tránsito, trabajo e integridad física</b>.</p></div>
+    <div class="msg"><span class="cn">6</span><p>La institucionalización de una universidad pública toma en promedio <b>18,75 años</b>: la interinidad es en sí misma un factor de conflictividad.</p></div>
+    <div class="msg wide"><span class="cn">7</span><p>La intervención de la Defensoría del Pueblo <b>contribuyó decisivamente al desescalamiento</b> de los conflictos analizados.</p></div>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — conclusiones</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — conclusiones</span></div>
 </section>
 
 <!-- P2 · RECOMENDACIONES -->
 <section class="slide" aria-label="Recomendaciones">
   <div class="eyebrow">Informe defensorial · Recomendaciones</div>
-  <h2>A quién le toca qué</h2>
-  <div class="cards" style="grid-template-columns:repeat(3,1fr);flex:1;align-content:stretch">
-    <div class="card">
-      <h3>A las autoridades universitarias</h3>
-      <p>Fortalecer la <b>gobernanza</b> con participación efectiva de docentes y estudiantes, e implementar mecanismos permanentes de diálogo con federaciones y sindicatos.</p>
-    </div>
-    <div class="card">
-      <h3>A la DIGESU del Minedu</h3>
-      <p>Evaluar la normativa de las <b>comisiones organizadoras</b>, fortalecer su gobernanza y disponer oportunamente su reconformación ante indicios de gestión deficiente.</p>
-    </div>
-    <div class="card">
-      <h3>A la Sunedu</h3>
-      <p>Supervisar el <b>dictado íntegro de las horas académicas</b> afectadas por las protestas, para que la pérdida no recaiga en los estudiantes.</p>
-    </div>
-    <div class="card">
-      <h3>Al Congreso de la República</h3>
-      <p>Aprobar una <b>solución normativa definitiva</b> a la homologación salarial docente (art. 96 de la Ley N.° 30220) y evaluar con criterios técnicos la creación de nuevas universidades públicas.</p>
-    </div>
-    <div class="card">
-      <h3>Al Minedu y al MEF</h3>
-      <p>Instalar una <b>comisión permanente de coordinación</b> con las federaciones y sindicatos docentes, antes de que la demanda se convierta en huelga.</p>
-    </div>
-    <div class="card">
-      <h3>A las Defensorías Universitarias</h3>
-      <p>Fortalecer sus capacidades como <b>primer espacio de canalización</b> de las controversias dentro de cada universidad.</p>
-    </div>
+  <h2>Quince recomendaciones a seis instituciones</h2>
+  <p class="lede">Toque cada institución para ver el texto completo de sus recomendaciones.</p>
+  <div class="recgrid">
+    <button class="rec" data-rec="congreso">
+      <span class="rc">Al Congreso de la República</span>
+      <span class="rn">3 recomendaciones</span>
+      <span class="rv"><em>Promover</em><em>Promover</em><em>Evaluar</em></span>
+    </button>
+    <button class="rec" data-rec="minedu">
+      <span class="rc">Al Minedu y al MEF</span>
+      <span class="rn">1 recomendación</span>
+      <span class="rv"><em>Instalar</em></span>
+    </button>
+    <button class="rec" data-rec="sunedu">
+      <span class="rc">A la Sunedu</span>
+      <span class="rn">1 recomendación</span>
+      <span class="rv"><em>Supervisar</em></span>
+    </button>
+    <button class="rec" data-rec="digesu">
+      <span class="rc">A la DIGESU del Minedu</span>
+      <span class="rn">3 recomendaciones</span>
+      <span class="rv"><em>Evaluar</em><em>Evaluar</em><em>Fortalecer</em></span>
+    </button>
+    <button class="rec" data-rec="univ">
+      <span class="rc">A las autoridades universitarias</span>
+      <span class="rn">3 recomendaciones</span>
+      <span class="rv"><em>Fortalecer</em><em>Implementar</em><em>Garantizar</em></span>
+    </button>
+    <button class="rec" data-rec="defuniv">
+      <span class="rc">A las Defensorías Universitarias</span>
+      <span class="rn">3 recomendaciones</span>
+      <span class="rv"><em>Fortalecer</em><em>Coordinar</em><em>Elaborar</em></span>
+    </button>
+    <button class="rec wide" data-rec="fiscalia">
+      <span class="rc">A la Fiscalía de Prevención del Delito del Ministerio Público</span>
+      <span class="rn">1 recomendación</span>
+      <span class="rv"><em>Realizar</em></span>
+    </button>
   </div>
-  <div class="footer"><span>Universidades en conflicto · 2023–2025</span><span class="src">Informe Defensorial — recomendaciones por institución</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — recomendaciones por institución</span></div>
 </section>
 
 <!-- P2 · PROYECTO: PORTADA -->
@@ -1340,13 +1433,13 @@
   <h2>Qué vamos a medir</h2>
   <p class="lede">El proyecto toma como línea base el <strong>número de tomas de local universitario</strong>, no el porcentaje: una toma menos es un resultado concreto y verificable.</p>
   <div class="cols c31">
-    <div class="cards" style="grid-template-columns:1fr 1fr;align-content:center">
+    <div class="cards" style="grid-template-columns:1fr 1fr;align-content:stretch">
       <div class="card"><h3><span class="tag">01</span> Indicador agregado</h3><p>Número de tomas de local universitario al año a <b>nivel nacional</b>, tomando como referencia el máximo de 2023–2025.</p></div>
       <div class="card"><h3><span class="tag">02</span> Indicador por universidad</h3><p>Número de tomas de local al año <b>en cada universidad</b>, con base en 2025.</p></div>
       <div class="card"><h3><span class="tag">03</span> Duración agregada</h3><p>Número de <b>días</b> que dura una toma a nivel nacional, con base en 2025.</p></div>
       <div class="card"><h3><span class="tag">04</span> Duración por universidad</h3><p>Número de días que dura una toma <b>en cada universidad</b>, con base en 2025.</p></div>
     </div>
-    <div class="tiles" style="grid-template-columns:1fr;align-content:center">
+    <div class="tiles" style="grid-template-columns:1fr;align-content:stretch">
       <div class="tile"><div class="num acc">31</div><div class="lbl"><b>tomas de local universitario</b> en 2025 — la línea base del proyecto</div></div>
       <div class="tile"><div class="num">375</div><div class="lbl"><b>días de toma</b> acumulados en 2025, más del triple que en 2024</div></div>
     </div>
@@ -1368,7 +1461,7 @@
       </div>
       <div class="chart-shell" id="uCompChart"></div>
     </div>
-    <div class="cards" style="align-content:center">
+    <div class="cards" style="align-content:stretch">
       <div class="card" style="border-color:rgba(226,58,78,.5);background:var(--crimson-soft)">
         <h3>Por eso la toma es el indicador</h3>
         <p>Es la medida que <b>más derechos afecta</b> y la única que crece. Por eso el piloto mide su éxito en tomas evitadas, no en protestas evitadas: protestar es un derecho.</p>
@@ -1405,7 +1498,7 @@
         </table>
       </div>
     </div>
-    <div class="tiles" style="grid-template-columns:1fr;align-content:center">
+    <div class="tiles" style="grid-template-columns:1fr;align-content:stretch">
       <div class="tile"><div class="num acc">102</div><div class="lbl"><b>días de toma</b> en la U.N. del Altiplano: el mayor registro del periodo, con 7 tomas</div></div>
       <div class="tile"><div class="num">27</div><div class="lbl"><b>universidades nacionales</b> registran al menos una toma de local en el periodo analizado</div></div>
     </div>
@@ -1450,6 +1543,13 @@
 
 </div>
 
+<div id="recPanel" hidden>
+  <div class="rp-box" role="dialog" aria-modal="true" aria-labelledby="rpTitle">
+    <button class="rp-close" id="rpClose" aria-label="Cerrar">✕</button>
+    <div class="rp-head"><span class="rp-kicker">Recomendaciones</span><h3 id="rpTitle"></h3></div>
+    <ol class="rp-list" id="rpList"></ol>
+  </div>
+</div>
 <img id="logoFixed" alt="">
 <div class="progress" id="progress"></div>
 <div class="counter" id="counter">1 / 15</div>
@@ -1502,6 +1602,7 @@ function go(i){
   document.getElementById('counter').textContent=(cur+1)+' / '+slides.length;
   document.getElementById('progress').style.width=((cur+1)/slides.length*100)+'%';
   document.body.classList.toggle('on-cover',slides[cur].classList.contains('cover'));
+  if(typeof recPanel!=='undefined'&&recPanel)recPanel.hidden=true;
   slides.forEach((s,k)=>s.querySelectorAll('video').forEach(v=>{k===cur?v.play().catch(()=>{}):v.pause()}));
   countUp(slides[cur]);
   drawAll();
@@ -1522,6 +1623,10 @@ addEventListener('fullscreenchange',()=>{
   setTimeout(drawAll,120);
 });
 addEventListener('keydown',e=>{
+  if(!recPanel.hidden){
+    if(e.key==='Escape'){e.preventDefault();closeRec()}
+    return;
+  }
   if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(cur+1)}
   if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(cur-1)}
   if(e.key==='Home')go(0); if(e.key==='End')go(slides.length-1);
@@ -1558,7 +1663,7 @@ function drawLine(){
   // grid + y labels
   for(let v=120;v<=240;v+=40){
     el('line',{x1:P.l,x2:W-P.r,y1:y(v),y2:y(v),stroke:C.grid,'stroke-width':1},svg);
-    const t=el('text',{x:P.l-8,y:y(v)+4,'text-anchor':'end',fill:C.faint,'font-size':12.5,'font-family':'Archivo'},svg);
+    const t=el('text',{x:P.l-8,y:y(v)+4,'text-anchor':'end',fill:C.faint,'font-size':15,'font-family':'Archivo'},svg);
     t.textContent=v;
   }
   // x labels: years
@@ -1566,7 +1671,7 @@ function drawLine(){
     if(d.m.endsWith('-01')){
       const yr=d.m.slice(0,4);
       if(+yr%2===1){
-        const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.faint,'font-size':12.5,'font-family':'Archivo'},svg);
+        const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.faint,'font-size':15,'font-family':'Archivo'},svg);
         t.textContent=yr;
       }
       el('line',{x1:x(i),x2:x(i),y1:H-P.b,y2:H-P.b+4,stroke:C.grid},svg);
@@ -1586,7 +1691,7 @@ function drawLine(){
   const ann=[[iPeak,'Máximo: '+SERIES[iPeak].t,-12],[iMin,'Mínimo: '+SERIES[iMin].t,20],[n-1,'Hoy: '+SERIES[n-1].t,-14]];
   ann.forEach(([i,lab,dy])=>{
     el('circle',{cx:x(i),cy:y(SERIES[i].t),r:4.5,fill:C.crimson,stroke:C.surface,'stroke-width':2},svg);
-    const t=el('text',{x:Math.min(x(i),W-P.r-4),y:y(SERIES[i].t)+dy,'text-anchor':i>n-10?'end':'middle',fill:C.ink2,'font-size':14,'font-weight':700,'font-family':'Archivo'},svg);
+    const t=el('text',{x:Math.min(x(i),W-P.r-4),y:y(SERIES[i].t)+dy,'text-anchor':i>n-10?'end':'middle',fill:C.ink2,'font-size':17,'font-weight':700,'font-family':'Archivo'},svg);
     t.textContent=lab;
   });
   // hover layer
@@ -1620,17 +1725,17 @@ function drawBars(id,data,{unit='',pct=false,hl=0,labelW=null,labelFs=null}={}){
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const max=Math.max(...data.map(d=>d[1]));
   const bh=(H-P.t-P.b)/data.length;
-  const bar=Math.min(bh*.62,30);
+  const bar=Math.min(bh*.7,86);
   const tip=document.createElement('div');tip.className='tooltip';shell.appendChild(tip);
   data.forEach((d,i)=>{
     const yy=P.t+bh*i+(bh-bar)/2;
     const w=Math.max(3,(W-P.l-P.r)*d[1]/max);
     const fill=i<hl?C.crimson:C.bar;
-    const lb=el('text',{x:P.l-10,y:yy+bar/2+4,'text-anchor':'end',fill:i<hl?C.ink:C.muted,'font-size':labelFs||Math.min(15.5,bh*.44),'font-family':'Atkinson Hyperlegible','font-weight':i<hl?700:400},svg);
+    const lb=el('text',{x:P.l-10,y:yy+bar/2+4,'text-anchor':'end',fill:i<hl?C.ink:C.muted,'font-size':labelFs||Math.min(19,bh*.44),'font-family':'Atkinson Hyperlegible','font-weight':i<hl?700:400},svg);
     lb.textContent=d[0];
     const r=el('rect',{x:P.l,y:yy,width:w,height:bar,fill,rx:0},svg);
     el('rect',{x:P.l+w-Math.min(4,w),y:yy,width:Math.min(4,w),height:bar,fill,rx:2},svg);
-    const v=el('text',{x:P.l+w+8,y:yy+bar/2+4,fill:C.ink2,'font-size':14,'font-weight':700,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
+    const v=el('text',{x:P.l+w+8,y:yy+bar/2+4,fill:C.ink2,'font-size':Math.min(21,Math.max(14,bar*.3)),'font-weight':700,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
     v.textContent=pct?d[1].toFixed(1).replace('.',',')+' %':d[1]+unit;
     r.addEventListener('mousemove',ev=>{
       const rc=shell.getBoundingClientRect();
@@ -1749,7 +1854,7 @@ function drawMulti(id,cfg){
     t.textContent=v;
   }
   cfg.cats.forEach((c,i)=>{
-    const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.faint,'font-size':12.5,'font-family':'Archivo'},svg);
+    const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.faint,'font-size':15,'font-family':'Archivo'},svg);
     t.textContent=c;
   });
   cfg.series.forEach(s=>{
@@ -1849,6 +1954,45 @@ const U_COMP={cats:["Plantones","Toma de\nlocales","Marcha","Paros","Bloqueo\nde
   series:[{n:"2023",c:C.crimson,v:[116,22,39,8,11,20,2,1]},
           {n:"2024",c:C.amber,v:[62,21,12,6,4,0,3,2]},
           {n:"2025",c:C.teal,v:[56,31,23,10,7,3,5,1]}]};
+
+/* ================= recomendaciones desplegables ================= */
+const REC={
+ congreso:{t:"Al Congreso de la República",r:[
+  "<b>PROMOVER</b> el fortalecimiento de las Defensorías Universitarias, a través de la modificación del artículo 133 de la Ley N.° 30220, Ley Universitaria, en la que se establezca entre sus funciones ejercer el rol de mediación entre los estudiantes y las autoridades universitarias en casos de conflictos sociales asociados al ámbito universitario, con la asistencia técnica de la Defensoría del Pueblo.",
+  "<b>PROMOVER</b> la aprobación de una solución normativa definitiva a la homologación de las remuneraciones de los docentes universitarios con las de los magistrados del Poder Judicial, prevista en el artículo 96 de la Ley Universitaria N.° 30220, con el objetivo de atender la principal causa de conflictividad identificada entre los docentes universitarios.",
+  "<b>EVALUAR</b> con criterios técnicos y de sostenibilidad financiera, presupuestal y de infraestructura, las iniciativas legislativas orientadas a la creación de nuevas universidades públicas, a fin de evitar que estas instituciones inicien su funcionamiento sin las condiciones básicas de calidad necesarias para garantizar una educación adecuada."]},
+ minedu:{t:"Al Ministerio de Educación y al Ministerio de Economía y Finanzas",r:[
+  "<b>INSTALAR</b> una comisión permanente de coordinación con los dirigentes de las federaciones y sindicatos de docentes universitarios, orientada a atender consultas y dar seguimiento continuo a las demandas relacionadas con el aumento de remuneraciones, entre otros."]},
+ sunedu:{t:"A la Superintendencia Nacional de Educación Superior Universitaria (Sunedu)",r:[
+  "<b>SUPERVISAR</b> que las universidades que hayan visto suspendidas o interrumpidas sus actividades académicas —a causa de acciones colectivas de protesta— cumplan con el dictado íntegro de las horas académicas correspondientes al semestre, a fin de resguardar el derecho a la educación de la comunidad estudiantil."]},
+ digesu:{t:"A la Dirección General de Educación Superior Universitaria (DIGESU) del Ministerio de Educación",r:[
+  "<b>EVALUAR</b> la normativa referida a la constitución y funcionamiento de las comisiones organizadoras de las universidades públicas, con el fin de fortalecer su gobernanza mediante la incorporación de mecanismos de participación de la comunidad universitaria, tales como comités de seguimiento u otros espacios similares.",
+  "<b>EVALUAR</b> de manera oportuna la reconformación de las comisiones organizadoras cuando se identifiquen indicios de deficiente gestión o de retraso injustificado en el proceso de institucionalización, a fin de reducir los factores que motivan la conflictividad en estas instituciones.",
+  "<b>FORTALECER</b> acciones que contribuyan a reducir el tiempo en la institucionalización de universidades públicas que cuentan con comisiones organizadoras."]},
+ univ:{t:"A las autoridades universitarias",r:[
+  "<b>FORTALECER</b> la gobernanza universitaria mediante la participación efectiva de los actores de la comunidad universitaria, en particular de docentes y estudiantes, en los espacios de toma de decisiones que afecten sus condiciones académicas, laborales y de bienestar.",
+  "<b>IMPLEMENTAR</b> mecanismos permanentes de diálogo institucional con las federaciones estudiantiles, centros federados y sindicatos docentes, que permitan atender de manera oportuna sus demandas y prevenir el escalamiento de los conflictos hacia medidas de fuerza que afecten el normal desarrollo de las actividades académicas.",
+  "<b>GARANTIZAR</b> la continuidad del derecho a la educación de la comunidad universitaria durante el desarrollo de acciones colectivas de protesta, adoptando medidas razonables —como la virtualización temporal de actividades— que resguarden el servicio educativo."]},
+ defuniv:{t:"A las Defensorías Universitarias",r:[
+  "<b>FORTALECER</b> sus capacidades institucionales para actuar como primer espacio de canalización de las controversias entre estudiantes, docentes y autoridades universitarias, promoviendo mecanismos de solución dialogada previos al surgimiento de acciones colectivas de protesta.",
+  "<b>COORDINAR</b> de manera oportuna con la Defensoría del Pueblo para la atención de casos que, por su complejidad o proyección, puedan derivar en conflictos sociales, con el objetivo de propiciar una intervención preventiva y articulada.",
+  "<b>ELABORAR</b> un diagnóstico de los problemas de la universidad que puedan derivar en conflictos sociales universitarios por la no atención de las demandas."]},
+ fiscalia:{t:"A la Fiscalía de Prevención del Delito del Ministerio Público",r:[
+  "<b>REALIZAR</b> charlas informativas dirigidas a la comunidad universitaria sobre el derecho a la protesta y sus límites en el contexto universitario, con énfasis en las consecuencias jurídicas de modalidades como las tomas de locales y bloqueo de vías, sin que ello suponga una restricción al ejercicio legítimo de este derecho."]}
+};
+const recPanel=document.getElementById('recPanel');
+function openRec(k){
+  const d=REC[k]; if(!d)return;
+  document.getElementById('rpTitle').textContent=d.t;
+  const ol=document.getElementById('rpList'); ol.innerHTML='';
+  d.r.forEach(t=>{const li=document.createElement('li');li.innerHTML=t;ol.appendChild(li)});
+  recPanel.hidden=false;
+  document.getElementById('rpClose').focus();
+}
+function closeRec(){recPanel.hidden=true}
+document.querySelectorAll('.rec').forEach(btn=>btn.addEventListener('click',()=>openRec(btn.dataset.rec)));
+document.getElementById('rpClose').addEventListener('click',closeRec);
+recPanel.addEventListener('click',e=>{if(e.target===recPanel)closeRec()});
 /* ================= draw all ================= */
 function drawAll(){
   requestAnimationFrame(()=>{
@@ -1860,12 +2004,12 @@ function drawAll(){
     drawCols('uYearChart',U_YEAR,{hl:0});
     drawMulti('uMonthChart',U_MONTH);
     drawBars('uRegChart',U_REG,{hl:1});
-    drawBars('uTopChart',U_TOP,{hl:3,labelW:290,labelFs:14});
+    drawBars('uTopChart',U_TOP,{hl:3,labelW:320,labelFs:16});
     drawShare('uActChart',U_ACT);
-    drawBars('uDemChart',U_DEM,{hl:2,labelW:340,labelFs:14});
+    drawBars('uDemChart',U_DEM,{hl:2,labelW:380,labelFs:17});
     drawBars('uDirChart',U_DIR,{hl:1});
     drawBars('uForChart',U_FOR,{pct:true,hl:2});
-    drawBars('uTomaChart',U_TOMA,{hl:1,labelW:300,labelFs:14});
+    drawBars('uTomaChart',U_TOMA,{hl:1,labelW:320,labelFs:17});
     drawGroupCols('uCompChart',U_COMP.cats,U_COMP.series);
   });
 }
