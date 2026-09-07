@@ -188,6 +188,12 @@
   .slide.active.launch .brandname{animation:riseSoft .85s .32s both}
   .slide.active.launch .tagrule{animation:riseSoft .7s .58s both}
   .slide.active.launch .tagline{animation:riseSoft .8s .7s both}
+  .ejehead{
+    font-family:var(--f-display);font-weight:800;font-size:clamp(14px,2.3vh,23px);
+    letter-spacing:.06em;text-transform:uppercase;color:var(--crimson);
+    padding-bottom:clamp(8px,1.3vh,13px);border-bottom:2px solid rgba(226,58,78,.45);
+    min-height:calc(2 * 1.25em + clamp(8px,1.3vh,13px));display:flex;align-items:flex-start;
+  }
   /* recomendaciones interactivas */
   .recgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.5vw,22px);flex:1;min-height:0;align-content:stretch}
   .rec{
@@ -1419,19 +1425,19 @@
     <span class="kicker">Proyecto piloto</span>
     <h1 class="brandname">Defensor<br><span class="al">Universitario</span></h1>
     <div class="tagrule"></div>
-    <p class="tagline">Si la protesta universitaria es <em>previsible</em>, también es <em>prevenible</em>.</p>
+    <p class="tagline">Fortalecimiento de la <em>prevención de conflictos sociales</em> en universidades</p>
   </div>
   <div class="cover-org">
-    <b>Fortalecimiento de la prevención de conflictos sociales en universidades</b>
-    <span>Adjuntía para la Prevención de Conflictos Sociales y la Gobernabilidad</span>
+    <b>Adjuntía para la Prevención de Conflictos Sociales y la Gobernabilidad</b>
+    <span>Defensoría del Pueblo del Perú</span>
   </div>
 </section>
 
 <!-- P2 · LÍNEA BASE -->
 <section class="slide" aria-label="Línea base e indicadores">
   <div class="eyebrow">Proyecto Defensor Universitario · La medida</div>
-  <h2>Qué vamos a medir</h2>
-  <p class="lede">El proyecto toma como línea base el <strong>número de tomas de local universitario</strong>, no el porcentaje: una toma menos es un resultado concreto y verificable.</p>
+  <h2>Indicadores de partida</h2>
+  <p class="lede">El proyecto toma como línea base el <strong>número y la duración de las tomas de local universitario</strong>. Esta elección permite identificar y verificar directamente variaciones en la ocurrencia del fenómeno, de modo que la reducción del número o su duración en días constituye un resultado concreto.</p>
   <div class="cols c31">
     <div class="cards" style="grid-template-columns:1fr 1fr;align-content:stretch">
       <div class="card"><h3><span class="tag">01</span> Indicador agregado</h3><p>Número de tomas de local universitario al año a <b>nivel nacional</b>, tomando como referencia el máximo de 2023–2025.</p></div>
@@ -1450,8 +1456,8 @@
 <!-- P2 · DIAGNÓSTICO DEL PILOTO -->
 <section class="slide" aria-label="Diagnóstico del piloto">
   <div class="eyebrow">Proyecto Defensor Universitario · El diagnóstico</div>
-  <h2>Menos protesta, pero más toma de local</h2>
-  <p class="lede">Comparando los tres años: los plantones caen a la mitad, pero <strong>las tomas de local suben</strong> — de 22 en 2023 a 31 en 2025. La protesta se reduce en volumen y se endurece en forma.</p>
+  <h2>Menos plantones, pero más toma de local</h2>
+  <p class="lede">Comparando los tres años: los plantones caen a la mitad, pero <strong>las tomas de local suben</strong> — de 22 en 2023 a 31 en 2025. Las acciones colectivas de protesta de tipo pacífico se redujeron.</p>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="legend">
@@ -1464,11 +1470,11 @@
     <div class="cards" style="align-content:stretch">
       <div class="card" style="border-color:rgba(226,58,78,.5);background:var(--crimson-soft)">
         <h3>Por eso la toma es el indicador</h3>
-        <p>Es la medida que <b>más derechos afecta</b> y la única que crece. Por eso el piloto mide su éxito en tomas evitadas, no en protestas evitadas: protestar es un derecho.</p>
+        <p>Es la medida que <b>más derechos afecta</b> y la única que crece. Por eso el piloto mide su éxito en la <b>reducción de tomas y su duración</b>, no en protestas evitadas: protestar es un derecho.</p>
       </div>
       <div class="card">
-        <h3>Y por eso el foco es estudiantil</h3>
-        <p>Estudiantes <b>45,2 %</b> · docentes <b>39,4 %</b> · trabajadores <b>15,1 %</b>. Los estudiantes protagonizan 72 de los 100 casos violentos: son el público prioritario de la sensibilización.</p>
+        <h3>El proyecto se dirige a estudiantes y docentes</h3>
+        <p>Estudiantes <b>45,2 %</b> · docentes <b>39,4 %</b> · trabajadores <b>15,1 %</b>. Entre estudiantes y docentes concentran más del <b>84 %</b> de la participación en las protestas registradas.</p>
       </div>
     </div>
   </div>
@@ -1478,32 +1484,44 @@
 <!-- P2 · GRUPO PILOTO -->
 <section class="slide" aria-label="Grupo piloto">
   <div class="eyebrow">Proyecto Defensor Universitario · Dónde</div>
-  <h2>Siete universidades para empezar</h2>
-  <p class="lede">De las 27 universidades con al menos una toma en el periodo, el piloto prioriza las que combinan <strong>más tomas y más días acumulados</strong>.</p>
-  <div class="cols c31">
-    <div style="display:flex;flex-direction:column;min-height:0">
-      <div class="chart-title">Grupo piloto · tomas de local y días acumulados, 2023–2025</div>
-      <div class="chart-shell" style="overflow:auto">
-        <table class="dtable">
-          <thead><tr><th>Universidad</th><th class="n">Tomas</th><th class="n">Días</th></tr></thead>
-          <tbody>
-            <tr><td>U.N. de Cajamarca</td><td class="n">10</td><td class="n">71</td></tr>
-            <tr><td>U.N. San Antonio Abad del Cusco</td><td class="n">8</td><td class="n">69</td></tr>
-            <tr class="hot"><td>U.N. del Altiplano</td><td class="n">7</td><td class="n">102</td></tr>
-            <tr><td>U.N. Mayor de San Marcos</td><td class="n">6</td><td class="n">14</td></tr>
-            <tr><td>U.N. del Centro del Perú</td><td class="n">5</td><td class="n">69</td></tr>
-            <tr><td>U.N. San Luis Gonzaga</td><td class="n">4</td><td class="n">77</td></tr>
-            <tr><td>U.N. de Huancavelica</td><td class="n">4</td><td class="n">21</td></tr>
-          </tbody>
-        </table>
-      </div>
+  <h2>15 universidades como grupo piloto</h2>
+  <p class="lede">De las 27 universidades con al menos una toma de local en el periodo, el piloto prioriza las <strong>15 que registran dos o más tomas</strong> entre 2023 y 2025.</p>
+  <div class="cols" style="grid-template-columns:1fr 1fr .78fr">
+    <div class="chart-shell">
+      <table class="dtable">
+        <thead><tr><th>Universidad</th><th class="n">Tomas</th><th class="n">Días</th></tr></thead>
+        <tbody>
+          <tr class="hot"><td>U.N. de Cajamarca</td><td class="n">10</td><td class="n">71</td></tr>
+          <tr class="hot"><td>U.N. San Antonio Abad del Cusco</td><td class="n">8</td><td class="n">69</td></tr>
+          <tr class="hot"><td>U.N. del Altiplano</td><td class="n">7</td><td class="n">102</td></tr>
+          <tr><td>U.N. Mayor de San Marcos</td><td class="n">6</td><td class="n">14</td></tr>
+          <tr><td>U.N. del Centro del Perú</td><td class="n">5</td><td class="n">69</td></tr>
+          <tr><td>U.N. San Luis Gonzaga</td><td class="n">4</td><td class="n">77</td></tr>
+          <tr><td>U.N. de Huancavelica</td><td class="n">4</td><td class="n">21</td></tr>
+          <tr><td>U.N. Intercultural de la Amazonía</td><td class="n">3</td><td class="n">3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-shell">
+      <table class="dtable">
+        <thead><tr><th>Universidad</th><th class="n">Tomas</th><th class="n">Días</th></tr></thead>
+        <tbody>
+          <tr><td>U.N. Santiago Antúnez de Mayolo</td><td class="n">3</td><td class="n">3</td></tr>
+          <tr><td>U.N. Intercultural de Quillabamba</td><td class="n">2</td><td class="n">51</td></tr>
+          <tr><td>U.N. San Cristóbal de Huamanga</td><td class="n">2</td><td class="n">28</td></tr>
+          <tr><td>U.N. de Jaén</td><td class="n">2</td><td class="n">27</td></tr>
+          <tr><td>U.N. Autónoma Alto Andina de Tarma</td><td class="n">2</td><td class="n">18</td></tr>
+          <tr><td>U.N. de Juliaca</td><td class="n">2</td><td class="n">3</td></tr>
+          <tr><td>U.N.I. Fabiola Salazar Leguía</td><td class="n">2</td><td class="n">2</td></tr>
+        </tbody>
+      </table>
     </div>
     <div class="tiles" style="grid-template-columns:1fr;align-content:stretch">
-      <div class="tile"><div class="num acc">102</div><div class="lbl"><b>días de toma</b> en la U.N. del Altiplano: el mayor registro del periodo, con 7 tomas</div></div>
-      <div class="tile"><div class="num">27</div><div class="lbl"><b>universidades nacionales</b> registran al menos una toma de local en el periodo analizado</div></div>
+      <div class="tile"><div class="num acc">57</div><div class="lbl">de las <b>74 tomas</b> del periodo ocurrieron en estas 15 universidades</div></div>
+      <div class="tile"><div class="num">102</div><div class="lbl"><b>días de toma</b> en la U.N. del Altiplano: el mayor registro del periodo</div></div>
     </div>
   </div>
-  <div class="footer"><span>Proyecto Defensor Universitario</span><span class="src">Grupo piloto priorizado por número de tomas y días acumulados</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Criterio de priorización: universidades con dos o más tomas de local · Tabla n.° 17</span></div>
 </section>
 
 <!-- P2 · ACCIONES -->
@@ -1512,25 +1530,24 @@
   <h2>Dos ejes de trabajo</h2>
   <div class="cols">
     <div style="display:flex;flex-direction:column;min-height:0;gap:clamp(10px,1.6vh,16px)">
-      <div class="chart-title" style="font-size:clamp(13px,1.9vh,17px);color:var(--crimson);letter-spacing:.1em;text-transform:uppercase">Eje 1 · Conocimientos</div>
+      <div class="ejehead">Eje 1 · Conocimientos y sensibilización</div>
       <div class="cards" style="flex:1;align-content:stretch">
-        <div class="card"><h3>Charlas sobre protesta y cultura del diálogo</h3><p>Sensibilización a la comunidad universitaria para promover <b>mecanismos pacíficos</b> de resolución de controversias.</p></div>
-        <div class="card"><h3>Charlas coordinadas con la fiscalía</h3><p>Información sobre los <b>alcances y límites del derecho a la protesta</b>, en articulación con el Ministerio Público.</p></div>
-        <div class="card"><h3>Mecanismos de defensa de derechos</h3><p>Capacitación a estudiantes y docentes sobre las <b>vías institucionales</b> para defender sus derechos.</p></div>
+        <div class="card"><h3>Fortalecimiento en defensa de derechos del ámbito universitario</h3><p>Capacitación a estudiantes y docentes sobre <b>los derechos en la educación superior universitaria</b>, así como las vías institucionales para defenderlos.</p></div>
+        <div class="card"><h3>Taller sobre cultura del diálogo y resolución de conflictos en democracia</h3><p>Sensibilización para promover <b>mecanismos pacíficos</b> de resolución de controversias: participación en mesas de diálogo y elaboración de actas.</p></div>
+        <div class="card"><h3>Charlas interinstitucionales</h3><p>Alcances y <b>límites del derecho a la protesta</b>, en articulación con el Ministerio Público; y derechos y deberes de la comunidad universitaria, con la <b>Sunedu</b>.</p></div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;min-height:0;gap:clamp(10px,1.6vh,16px)">
-      <div class="chart-title" style="font-size:clamp(13px,1.9vh,17px);color:var(--crimson);letter-spacing:.1em;text-transform:uppercase">Eje 2 · Articulación interinstitucional</div>
+      <div class="ejehead">Eje 2 · Articulación interinstitucional para la prevención</div>
       <div class="cards" style="flex:1;align-content:stretch">
-        <div class="card"><h3>Asistencia técnica a las universidades</h3><p>Acompañamiento especializado a las universidades priorizadas en la <b>gestión de sus conflictos</b>.</p></div>
-        <div class="card"><h3>Proyecto de ley para las Defensorías universitarias</h3><p>Propuesta normativa para <b>facultarlas a gestionar conflictos</b>, con asistencia técnica de la Defensoría del Pueblo.</p></div>
-        <div class="card"><h3>Comisión de diálogo permanente</h3><p>Un espacio estable entre <b>docentes universitarios, Minedu y MEF</b>, para que la demanda no tenga que volverse huelga.</p></div>
+        <div class="card"><h3>Fortalecer la alerta preventiva en las universidades</h3><p>Proporcionar un <b>instrumento de alerta preventiva</b> a las defensorías universitarias y a la representación docente y estudiantil, para que reporten situaciones que puedan derivar en protestas.</p></div>
+        <div class="card"><h3>Asistencia técnica a las universidades</h3><p>Acompañamiento especializado a las <b>universidades priorizadas</b> en la gestión de sus conflictos.</p></div>
+        <div class="card"><h3>Impulsar mesas de trabajo de diálogo permanente</h3><p>Un espacio estable entre <b>docentes universitarios, Minedu y MEF</b>, para que las protestas no deriven en situaciones de violencia.</p></div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>Proyecto Defensor Universitario</span><span class="src">Acciones a desarrollar · Ejes 1 y 2</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Proyecto Piloto Defensor Universitario — acciones a desarrollar</span></div>
 </section>
-
 
 <!-- 15 · CIERRE -->
 <section class="slide cover" aria-label="Cierre">
