@@ -287,6 +287,8 @@
   .dtable tr:last-child td{border-bottom:none}
   .dtable tr.hot td{color:var(--ink)}
   .dtable tr.hot td:first-child{box-shadow:inset 3px 0 0 var(--crimson)}
+  .dtable.compact{font-size:clamp(12px,1.85vh,19px)}
+  .dtable.compact td{padding:clamp(5px,1vh,11px) 9px}
   /* deltas: antes → después */
   .deltas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,24px);flex:1;min-height:0;align-content:stretch}
   .delta{
@@ -797,6 +799,35 @@
     </div>
   </div>
   <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Directiva N.° 0001-2026-DP/PAD — numerales 6.6, 6.8 y 7.7</span></div>
+</section>
+
+<!-- INFORMES DEFENSORIALES -->
+<section class="slide" aria-label="Informes defensoriales">
+  <div class="eyebrow">Informes defensoriales · 2023 – 2026</div>
+  <h2>Cuatro informes solo en 2026</h2>
+  <p class="lede">La Adjuntía ha producido <strong>ocho informes</strong> desde 2023 — la mitad de ellos este año — sobre las materias donde la conflictividad exige respuesta del Estado.</p>
+  <div class="cols c31">
+    <div class="chart-shell">
+      <table class="dtable compact">
+        <thead><tr><th>Informe</th><th>Fecha</th><th>Materia</th></tr></thead>
+        <tbody>
+          <tr><td>N.° 001-2023-DP/APCSGO</td><td>21 jul. 2023</td><td>Protestas del 19 de julio en Lima y regiones</td></tr>
+          <tr><td>N.° 003-2025-DP/ACSGO</td><td>11 ago. 2025</td><td>Uso de explosivos y formalización minera</td></tr>
+          <tr><td>N.° 004-2025-DP/ACSGO</td><td>11 ago. 2025</td><td>Notificación a mineros excluidos del REINFO</td></tr>
+          <tr><td>N.° 001-2025-DP/ACSGO</td><td>15 dic. 2025</td><td>Opinión al proyecto de ley sobre mediación</td></tr>
+          <tr class="hot"><td>Informe Defensorial N.° 273</td><td>abr. 2026</td><td>Reparación ante derrames de hidrocarburos</td></tr>
+          <tr class="hot"><td>Informe Defensorial N.° 278</td><td>12 jun. 2026</td><td>Cumplimiento de acuerdos del sector ambiente</td></tr>
+          <tr class="hot"><td>Informe Defensorial N.° 284</td><td>23 jun. 2026</td><td>Conflictos electorales y sucesión gubernamental</td></tr>
+          <tr class="hot"><td>Informe Defensorial N.° 279</td><td>2 jul. 2026</td><td>Supervisión a oficinas de gestión de conflictos del Estado</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tiles" style="grid-template-columns:1fr;align-content:stretch">
+      <div class="tile"><div class="num acc">165</div><div class="lbl"><b>recomendaciones</b> formuladas en los ocho informes</div></div>
+      <div class="tile"><div class="num">45</div><div class="lbl"><b>instituciones</b> del Estado alcanzadas por esas recomendaciones</div></div>
+    </div>
+  </div>
+  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Informes defensoriales de la ACSGO, 2023–2026 · Balance de informes y recomendaciones</span></div>
 </section>
 
 <!-- OBSERVATORIO -->
@@ -1578,7 +1609,7 @@
 
 <script>
 /* ================= data ================= */
-const SERIES = [{"r":131,"m":"2015-01","t":212,"a":162,"l":50},{"r":132,"m":"2015-02","t":210,"a":160,"l":50},{"r":133,"m":"2015-03","t":210,"a":155,"l":55},{"r":134,"m":"2015-04","t":208,"a":149,"l":59},{"r":135,"m":"2015-05","t":211,"a":152,"l":59},{"r":136,"m":"2015-06","t":210,"a":149,"l":61},{"r":137,"m":"2015-07","t":209,"a":148,"l":61},{"r":138,"m":"2015-08","t":213,"a":152,"l":61},{"r":139,"m":"2015-09","t":214,"a":150,"l":64},{"r":140,"m":"2015-10","t":209,"a":150,"l":59},{"r":141,"m":"2015-11","t":215,"a":153,"l":62},{"r":142,"m":"2015-12","t":211,"a":145,"l":66},{"r":143,"m":"2016-01","t":211,"a":143,"l":68},{"r":144,"m":"2016-01","t":208,"a":142,"l":66},{"r":145,"m":"2016-03","t":211,"a":145,"l":66},{"r":146,"m":"2016-04","t":209,"a":145,"l":64},{"r":147,"m":"2016-05","t":212,"a":152,"l":60},{"r":148,"m":"2016-06","t":211,"a":151,"l":60},{"r":149,"m":"2016-07","t":213,"a":154,"l":59},{"r":150,"m":"2016-08","t":208,"a":152,"l":56},{"r":151,"m":"2016-09","t":204,"a":146,"l":58},{"r":152,"m":"2016-10","t":211,"a":154,"l":57},{"r":153,"m":"2016-11","t":213,"a":156,"l":57},{"r":154,"m":"2016-12","t":212,"a":156,"l":56},{"r":155,"m":"2017-01","t":210,"a":150,"l":60},{"r":156,"m":"2017-02","t":213,"a":155,"l":58},{"r":157,"m":"2017-03","t":204,"a":141,"l":63},{"r":158,"m":"2017-04","t":198,"a":139,"l":59},{"r":159,"m":"2017-05","t":178,"a":123,"l":55},{"r":160,"m":"2017-06","t":177,"a":123,"l":54},{"r":161,"m":"2017-07","t":177,"a":115,"l":62},{"r":162,"m":"2017-08","t":166,"a":108,"l":58},{"r":163,"m":"2017-09","t":168,"a":112,"l":56},{"r":164,"m":"2017-10","t":170,"a":114,"l":56},{"r":165,"m":"2017-11","t":171,"a":118,"l":53},{"r":166,"m":"2017-12","t":169,"a":118,"l":51},{"r":167,"m":"2018-01","t":176,"a":124,"l":52},{"r":168,"m":"2018-02","t":182,"a":130,"l":52},{"r":169,"m":"2018-03","t":188,"a":135,"l":53},{"r":170,"m":"2018-04","t":195,"a":142,"l":53},{"r":171,"m":"2018-05","t":202,"a":150,"l":52},{"r":172,"m":"2018-06","t":198,"a":144,"l":54},{"r":174,"m":"2018-08","t":196,"a":134,"l":62},{"r":175,"m":"2018-09","t":201,"a":142,"l":59},{"r":176,"m":"2018-10","t":199,"a":142,"l":57},{"r":177,"m":"2018-11","t":194,"a":136,"l":58},{"r":178,"m":"2018-12","t":181,"a":130,"l":51},{"r":179,"m":"2019-01","t":179,"a":133,"l":46},{"r":180,"m":"2019-02","t":179,"a":132,"l":47},{"r":181,"m":"2019-03","t":183,"a":135,"l":48},{"r":182,"m":"2019-04","t":184,"a":136,"l":48},{"r":183,"m":"2019-05","t":176,"a":129,"l":47},{"r":184,"m":"2019-06","t":178,"a":130,"l":48},{"r":185,"m":"2019-07","t":184,"a":135,"l":49},{"r":186,"m":"2019-08","t":186,"a":138,"l":48},{"r":188,"m":"2019-10","t":187,"a":134,"l":53},{"r":189,"m":"2019-11","t":185,"a":134,"l":51},{"r":190,"m":"2019-12","t":184,"a":133,"l":51},{"r":191,"m":"2020-01","t":178,"a":127,"l":51},{"r":192,"m":"2020-02","t":188,"a":137,"l":51},{"r":193,"m":"2020-03","t":188,"a":137,"l":51},{"r":194,"m":"2020-04","t":188,"a":137,"l":51},{"r":195,"m":"2020-05","t":189,"a":138,"l":51},{"r":196,"m":"2020-06","t":190,"a":140,"l":50},{"r":197,"m":"2020-07","t":192,"a":142,"l":50},{"r":198,"m":"2020-08","t":190,"a":143,"l":47},{"r":199,"m":"2020-09","t":189,"a":142,"l":47},{"r":200,"m":"2020-10","t":191,"a":144,"l":47},{"r":201,"m":"2020-11","t":198,"a":147,"l":51},{"r":202,"m":"2020-12","t":197,"a":146,"l":51},{"r":203,"m":"2021-01","t":196,"a":145,"l":51},{"r":204,"m":"2021-02","t":197,"a":144,"l":53},{"r":205,"m":"2021-03","t":194,"a":143,"l":51},{"r":206,"m":"2021-04","t":191,"a":141,"l":50},{"r":207,"m":"2021-05","t":191,"a":142,"l":49},{"r":208,"m":"2021-06","t":193,"a":138,"l":55},{"r":209,"m":"2021-07","t":195,"a":137,"l":58},{"r":210,"m":"2021-08","t":196,"a":139,"l":57},{"r":211,"m":"2021-09","t":198,"a":142,"l":56},{"r":212,"m":"2021-10","t":198,"a":148,"l":50},{"r":213,"m":"2021-11","t":199,"a":147,"l":52},{"r":214,"m":"2021-12","t":202,"a":148,"l":54},{"r":215,"m":"2022-01","t":203,"a":154,"l":49},{"r":216,"m":"2022-02","t":203,"a":157,"l":46},{"r":217,"m":"2022-03","t":208,"a":160,"l":48},{"r":218,"m":"2022-04","t":209,"a":160,"l":49},{"r":219,"m":"2022-05","t":205,"a":151,"l":54},{"r":220,"m":"2022-06","t":207,"a":153,"l":54},{"r":221,"m":"2022-07","t":208,"a":152,"l":56},{"r":222,"m":"2022-08","t":209,"a":149,"l":60},{"r":223,"m":"2022-09","t":211,"a":152,"l":59},{"r":224,"m":"2022-10","t":218,"a":159,"l":59},{"r":225,"m":"2022-11","t":221,"a":161,"l":60},{"r":226,"m":"2022-12","t":221,"a":160,"l":61},{"r":227,"m":"2023-01","t":219,"a":156,"l":63},{"r":228,"m":"2023-02","t":218,"a":157,"l":61},{"r":229,"m":"2023-03","t":221,"a":162,"l":59},{"r":230,"m":"2023-04","t":225,"a":165,"l":60},{"r":231,"m":"2023-05","t":223,"a":168,"l":55},{"r":232,"m":"2023-06","t":219,"a":165,"l":54},{"r":233,"m":"2023-07","t":225,"a":172,"l":53},{"r":234,"m":"2023-08","t":225,"a":172,"l":53},{"r":235,"m":"2023-09","t":224,"a":176,"l":48},{"r":236,"m":"2023-10","t":224,"a":176,"l":48},{"r":237,"m":"2023-11","t":218,"a":170,"l":48},{"r":238,"m":"2023-12","t":215,"a":168,"l":47},{"r":239,"m":"2024-01","t":217,"a":175,"l":42},{"r":240,"m":"2024-02","t":213,"a":167,"l":46},{"r":241,"m":"2024-03","t":209,"a":166,"l":43},{"r":242,"m":"2024-04","t":208,"a":168,"l":40},{"r":243,"m":"2024-05","t":209,"a":166,"l":43},{"r":244,"m":"2024-06","t":212,"a":164,"l":48},{"r":245,"m":"2024-07","t":209,"a":159,"l":50},{"r":246,"m":"2024-08","t":206,"a":157,"l":49},{"r":247,"m":"2024-09","t":206,"a":161,"l":45},{"r":248,"m":"2024-10","t":209,"a":163,"l":46},{"r":249,"m":"2024-11","t":194,"a":154,"l":40},{"r":250,"m":"2024-12","t":196,"a":148,"l":48},{"r":251,"m":"2025-01","t":197,"a":146,"l":51},{"r":252,"m":"2025-02","t":191,"a":144,"l":47},{"r":253,"m":"2025-03","t":193,"a":141,"l":52},{"r":254,"m":"2025-04","t":197,"a":143,"l":54},{"r":255,"m":"2025-05","t":195,"a":145,"l":50},{"r":256,"m":"2025-06","t":195,"a":147,"l":48},{"r":257,"m":"2025-07","t":199,"a":150,"l":49},{"r":258,"m":"2025-08","t":195,"a":148,"l":47},{"r":259,"m":"2025-09","t":199,"a":160,"l":39},{"r":260,"m":"2025-10","t":197,"a":166,"l":31},{"r":261,"m":"2025-11","t":204,"a":168,"l":36},{"r":262,"m":"2025-12","t":204,"a":164,"l":40},{"r":263,"m":"2026-01","t":193,"a":164,"l":29},{"r":264,"m":"2026-02","t":192,"a":165,"l":27},{"r":265,"m":"2026-03","t":193,"a":161,"l":32},{"r":266,"m":"2026-04","t":190,"a":159,"l":31},{"r":267,"m":"2026-05","t":195,"a":153,"l":42},{"r":268,"m":"2026-06","t":197,"a":151,"l":46},{"r":269,"m":"2026-07","t":191,"a":150,"l":41}];
+const SERIES = [{"r":131,"m":"2015-01","t":212,"a":162,"l":50},{"r":132,"m":"2015-02","t":210,"a":160,"l":50},{"r":133,"m":"2015-03","t":210,"a":155,"l":55},{"r":134,"m":"2015-04","t":208,"a":149,"l":59},{"r":135,"m":"2015-05","t":211,"a":152,"l":59},{"r":136,"m":"2015-06","t":210,"a":149,"l":61},{"r":137,"m":"2015-07","t":209,"a":148,"l":61},{"r":138,"m":"2015-08","t":213,"a":152,"l":61},{"r":139,"m":"2015-09","t":214,"a":150,"l":64},{"r":140,"m":"2015-10","t":209,"a":150,"l":59},{"r":141,"m":"2015-11","t":215,"a":153,"l":62},{"r":142,"m":"2015-12","t":211,"a":145,"l":66},{"r":143,"m":"2016-01","t":211,"a":143,"l":68},{"r":144,"m":"2016-02","t":208,"a":142,"l":66},{"r":145,"m":"2016-03","t":211,"a":145,"l":66},{"r":146,"m":"2016-04","t":209,"a":145,"l":64},{"r":147,"m":"2016-05","t":212,"a":152,"l":60},{"r":148,"m":"2016-06","t":211,"a":151,"l":60},{"r":149,"m":"2016-07","t":213,"a":154,"l":59},{"r":150,"m":"2016-08","t":208,"a":152,"l":56},{"r":151,"m":"2016-09","t":204,"a":146,"l":58},{"r":152,"m":"2016-10","t":211,"a":154,"l":57},{"r":153,"m":"2016-11","t":213,"a":156,"l":57},{"r":154,"m":"2016-12","t":212,"a":156,"l":56},{"r":155,"m":"2017-01","t":210,"a":150,"l":60},{"r":156,"m":"2017-02","t":213,"a":155,"l":58},{"r":157,"m":"2017-03","t":204,"a":141,"l":63},{"r":158,"m":"2017-04","t":198,"a":139,"l":59},{"r":159,"m":"2017-05","t":178,"a":123,"l":55},{"r":160,"m":"2017-06","t":177,"a":123,"l":54},{"r":161,"m":"2017-07","t":177,"a":115,"l":62},{"r":162,"m":"2017-08","t":166,"a":108,"l":58},{"r":163,"m":"2017-09","t":168,"a":112,"l":56},{"r":164,"m":"2017-10","t":170,"a":114,"l":56},{"r":165,"m":"2017-11","t":171,"a":118,"l":53},{"r":166,"m":"2017-12","t":169,"a":118,"l":51},{"r":167,"m":"2018-01","t":176,"a":124,"l":52},{"r":168,"m":"2018-02","t":182,"a":130,"l":52},{"r":169,"m":"2018-03","t":188,"a":135,"l":53},{"r":170,"m":"2018-04","t":195,"a":142,"l":53},{"r":171,"m":"2018-05","t":202,"a":150,"l":52},{"r":172,"m":"2018-06","t":198,"a":144,"l":54},{"r":174,"m":"2018-08","t":196,"a":134,"l":62},{"r":175,"m":"2018-09","t":201,"a":142,"l":59},{"r":176,"m":"2018-10","t":199,"a":142,"l":57},{"r":177,"m":"2018-11","t":194,"a":136,"l":58},{"r":178,"m":"2018-12","t":181,"a":130,"l":51},{"r":179,"m":"2019-01","t":179,"a":133,"l":46},{"r":180,"m":"2019-02","t":179,"a":132,"l":47},{"r":181,"m":"2019-03","t":183,"a":135,"l":48},{"r":182,"m":"2019-04","t":184,"a":136,"l":48},{"r":183,"m":"2019-05","t":176,"a":129,"l":47},{"r":184,"m":"2019-06","t":178,"a":130,"l":48},{"r":185,"m":"2019-07","t":184,"a":135,"l":49},{"r":186,"m":"2019-08","t":186,"a":138,"l":48},{"r":188,"m":"2019-10","t":187,"a":134,"l":53},{"r":189,"m":"2019-11","t":185,"a":134,"l":51},{"r":190,"m":"2019-12","t":184,"a":133,"l":51},{"r":191,"m":"2020-01","t":178,"a":127,"l":51},{"r":192,"m":"2020-02","t":188,"a":137,"l":51},{"r":193,"m":"2020-03","t":188,"a":137,"l":51},{"r":194,"m":"2020-04","t":188,"a":137,"l":51},{"r":195,"m":"2020-05","t":189,"a":138,"l":51},{"r":196,"m":"2020-06","t":190,"a":140,"l":50},{"r":197,"m":"2020-07","t":192,"a":142,"l":50},{"r":198,"m":"2020-08","t":190,"a":143,"l":47},{"r":199,"m":"2020-09","t":189,"a":142,"l":47},{"r":200,"m":"2020-10","t":191,"a":144,"l":47},{"r":201,"m":"2020-11","t":198,"a":147,"l":51},{"r":202,"m":"2020-12","t":197,"a":146,"l":51},{"r":203,"m":"2021-01","t":196,"a":145,"l":51},{"r":204,"m":"2021-02","t":197,"a":144,"l":53},{"r":205,"m":"2021-03","t":194,"a":143,"l":51},{"r":206,"m":"2021-04","t":191,"a":141,"l":50},{"r":207,"m":"2021-05","t":191,"a":142,"l":49},{"r":208,"m":"2021-06","t":193,"a":138,"l":55},{"r":209,"m":"2021-07","t":195,"a":137,"l":58},{"r":210,"m":"2021-08","t":196,"a":139,"l":57},{"r":211,"m":"2021-09","t":198,"a":142,"l":56},{"r":212,"m":"2021-10","t":198,"a":148,"l":50},{"r":213,"m":"2021-11","t":199,"a":147,"l":52},{"r":214,"m":"2021-12","t":202,"a":148,"l":54},{"r":215,"m":"2022-01","t":203,"a":154,"l":49},{"r":216,"m":"2022-02","t":203,"a":157,"l":46},{"r":217,"m":"2022-03","t":208,"a":160,"l":48},{"r":218,"m":"2022-04","t":209,"a":160,"l":49},{"r":219,"m":"2022-05","t":205,"a":151,"l":54},{"r":220,"m":"2022-06","t":207,"a":153,"l":54},{"r":221,"m":"2022-07","t":208,"a":152,"l":56},{"r":222,"m":"2022-08","t":209,"a":149,"l":60},{"r":223,"m":"2022-09","t":211,"a":152,"l":59},{"r":224,"m":"2022-10","t":218,"a":159,"l":59},{"r":225,"m":"2022-11","t":221,"a":161,"l":60},{"r":226,"m":"2022-12","t":221,"a":160,"l":61},{"r":227,"m":"2023-01","t":219,"a":156,"l":63},{"r":228,"m":"2023-02","t":218,"a":157,"l":61},{"r":229,"m":"2023-03","t":221,"a":162,"l":59},{"r":230,"m":"2023-04","t":225,"a":165,"l":60},{"r":231,"m":"2023-05","t":223,"a":168,"l":55},{"r":232,"m":"2023-06","t":219,"a":165,"l":54},{"r":233,"m":"2023-07","t":225,"a":172,"l":53},{"r":234,"m":"2023-08","t":225,"a":172,"l":53},{"r":235,"m":"2023-09","t":224,"a":176,"l":48},{"r":236,"m":"2023-10","t":224,"a":176,"l":48},{"r":237,"m":"2023-11","t":218,"a":170,"l":48},{"r":238,"m":"2023-12","t":215,"a":168,"l":47},{"r":239,"m":"2024-01","t":217,"a":175,"l":42},{"r":240,"m":"2024-02","t":213,"a":167,"l":46},{"r":241,"m":"2024-03","t":209,"a":166,"l":43},{"r":242,"m":"2024-04","t":208,"a":168,"l":40},{"r":243,"m":"2024-05","t":209,"a":166,"l":43},{"r":244,"m":"2024-06","t":212,"a":164,"l":48},{"r":245,"m":"2024-07","t":209,"a":159,"l":50},{"r":246,"m":"2024-08","t":206,"a":157,"l":49},{"r":247,"m":"2024-09","t":206,"a":161,"l":45},{"r":248,"m":"2024-10","t":209,"a":163,"l":46},{"r":249,"m":"2024-11","t":194,"a":154,"l":40},{"r":250,"m":"2024-12","t":196,"a":148,"l":48},{"r":251,"m":"2025-01","t":197,"a":146,"l":51},{"r":252,"m":"2025-02","t":191,"a":144,"l":47},{"r":253,"m":"2025-03","t":193,"a":141,"l":52},{"r":254,"m":"2025-04","t":197,"a":143,"l":54},{"r":255,"m":"2025-05","t":195,"a":145,"l":50},{"r":256,"m":"2025-06","t":195,"a":147,"l":48},{"r":257,"m":"2025-07","t":199,"a":150,"l":49},{"r":258,"m":"2025-08","t":195,"a":148,"l":47},{"r":259,"m":"2025-09","t":199,"a":160,"l":39},{"r":260,"m":"2025-10","t":197,"a":166,"l":31},{"r":261,"m":"2025-11","t":204,"a":168,"l":36},{"r":262,"m":"2025-12","t":204,"a":164,"l":40},{"r":263,"m":"2026-01","t":193,"a":164,"l":29},{"r":264,"m":"2026-02","t":192,"a":165,"l":27},{"r":265,"m":"2026-03","t":193,"a":161,"l":32},{"r":266,"m":"2026-04","t":190,"a":159,"l":31},{"r":267,"m":"2026-05","t":195,"a":153,"l":42},{"r":268,"m":"2026-06","t":197,"a":151,"l":46},{"r":269,"m":"2026-07","t":191,"a":150,"l":41}];
 const TYPES = [
   ["Socioambiental",63.1],["Asuntos de gob. nacional",8.5],["Comunal",7.4],
   ["Asuntos de gob. local",7.2],["Asuntos de gob. regional",5.0],["Demarcación territorial",3.3],
@@ -1668,11 +1699,18 @@ function fmt(n){return n.toLocaleString('es-PE')}
 const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
 function mlabel(m){const[y,mm]=m.split('-');return MESES[+mm-1]+'. '+y}
 
+function boxOf(shell){
+  const cs=getComputedStyle(shell);
+  const pl=parseFloat(cs.paddingLeft)||0, pr=parseFloat(cs.paddingRight)||0;
+  const pt=parseFloat(cs.paddingTop)||0, pb=parseFloat(cs.paddingBottom)||0;
+  return {W:Math.max(0,Math.round(shell.clientWidth-pl-pr)), H:Math.max(0,Math.round(shell.clientHeight-pt-pb)), pl, pt};
+}
+function svgX(svg,ev){ return ev.clientX - svg.getBoundingClientRect().left; }
 /* ================= line chart ================= */
 function drawLine(){
   const shell=document.getElementById('lineChart'); if(!shell)return;
   clear(shell);
-  const W=shell.clientWidth-2, H=shell.clientHeight-2;
+  const {W,H,pl,pt}=boxOf(shell);
   if(W<80||H<80)return;
   const P={l:46,r:16,t:26,b:30};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Serie mensual de conflictos registrados, 2015 a 2026"},shell);
@@ -1686,14 +1724,14 @@ function drawLine(){
     t.textContent=v;
   }
   // x labels: years
+  const yrSeen={};
   SERIES.forEach((d,i)=>{
-    if(d.m.endsWith('-01')){
-      const yr=d.m.slice(0,4);
-      if(+yr%2===1){
-        const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.faint,'font-size':15,'font-family':'Archivo'},svg);
-        t.textContent=yr;
-      }
-      el('line',{x1:x(i),x2:x(i),y1:H-P.b,y2:H-P.b+4,stroke:C.grid},svg);
+    const yr=d.m.slice(0,4);
+    if(d.m.endsWith('-01')&&!yrSeen[yr]){
+      yrSeen[yr]=1;
+      const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.muted,'font-size':16,'font-weight':600,'font-family':'Archivo'},svg);
+      t.textContent=yr;
+      el('line',{x1:x(i),x2:x(i),y1:H-P.b,y2:H-P.b+5,stroke:C.grid},svg);
     }
   });
   // area + line
@@ -1719,8 +1757,7 @@ function drawLine(){
   const dot=el('circle',{r:5,fill:C.crimson,stroke:'#060D18','stroke-width':2,opacity:0},svg);
   const hit=el('rect',{x:P.l,y:P.t,width:W-P.l-P.r,height:H-P.t-P.b,fill:'transparent'},svg);
   hit.addEventListener('mousemove',ev=>{
-    const r=shell.getBoundingClientRect();
-    const i=Math.round((ev.clientX-r.left-P.l)/((W-P.l-P.r)/(n-1)));
+    const i=Math.round((svgX(svg,ev)-P.l)/((W-P.l-P.r)/(n-1)));
     if(i<0||i>=n)return;
     const d=SERIES[i];
     cross.setAttribute('x1',x(i));cross.setAttribute('x2',x(i));cross.setAttribute('opacity',1);
@@ -1728,8 +1765,8 @@ function drawLine(){
     tip.innerHTML=`<b>${mlabel(d.m)}</b> · Reporte N.° ${d.r}<br>Registrados: <b>${d.t}</b><br>Activos ${d.a} · Latentes ${d.l}`;
     tip.style.opacity=1;
     const tw=tip.offsetWidth;
-    tip.style.left=Math.min(Math.max(x(i)-tw/2,6),W-tw-6)+'px';
-    tip.style.top=Math.max(y(d.t)-72,4)+'px';
+    tip.style.left=pl+Math.min(Math.max(x(i)-tw/2,0),W-tw)+'px';
+    tip.style.top=pt+Math.max(y(d.t)-78,0)+'px';
   });
   hit.addEventListener('mouseleave',()=>{tip.style.opacity=0;cross.setAttribute('opacity',0);dot.setAttribute('opacity',0)});
 }
@@ -1738,7 +1775,7 @@ function drawLine(){
 function drawBars(id,data,{unit='',pct=false,hl=0,labelW=null,labelFs=null}={}){
   const shell=document.getElementById(id); if(!shell)return;
   clear(shell);
-  const W=shell.clientWidth-2,H=shell.clientHeight-2;
+  const {W,H,pl,pt}=boxOf(shell);
   if(W<80||H<80)return;
   const P={l:labelW?Math.min(labelW,W*.52):Math.min(200,W*.34),r:64,t:8,b:8};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
@@ -1757,11 +1794,10 @@ function drawBars(id,data,{unit='',pct=false,hl=0,labelW=null,labelFs=null}={}){
     const v=el('text',{x:P.l+w+8,y:yy+bar/2+4,fill:C.ink2,'font-size':Math.min(21,Math.max(14,bar*.3)),'font-weight':700,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
     v.textContent=pct?d[1].toFixed(1).replace('.',',')+' %':d[1]+unit;
     r.addEventListener('mousemove',ev=>{
-      const rc=shell.getBoundingClientRect();
       tip.innerHTML=`<b>${d[0]}</b><br>${pct?d[1].toFixed(1).replace('.',',')+' % de los registros':d[1]+' conflictos registrados'}`;
       tip.style.opacity=1;
-      tip.style.left=Math.min(ev.clientX-rc.left+14,W-tip.offsetWidth-6)+'px';
-      tip.style.top=(yy-8)+'px';
+      tip.style.left=pl+Math.min(svgX(svg,ev)+14,W-tip.offsetWidth)+'px';
+      tip.style.top=pt+yy-8+'px';
     });
     r.addEventListener('mouseleave',()=>tip.style.opacity=0);
   });
@@ -1833,7 +1869,7 @@ const U_TOMA=[["U.N. del Altiplano",102],["U.N. de Trujillo",77],["U.N. San Luis
 /* ================= columnas verticales ================= */
 function drawCols(id,data,{suffix="",hl=-1}={}){
   const shell=document.getElementById(id); if(!shell)return; clear(shell);
-  const W=shell.clientWidth-2,H=shell.clientHeight-2; if(W<80||H<80)return;
+  const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
   const P={l:14,r:14,t:38,b:34};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const max=Math.max(...data.map(d=>d[1]))*1.16;
@@ -1851,9 +1887,9 @@ function drawCols(id,data,{suffix="",hl=-1}={}){
     v.textContent=d[1]+suffix;
     const l=el('text',{x:cx,y:H-P.b+22,'text-anchor':'middle',fill:C.muted,'font-size':Math.min(15,slot*.18),'font-family':'Atkinson Hyperlegible'},svg);
     l.textContent=d[0];
-    r.addEventListener('mousemove',ev=>{const rc=shell.getBoundingClientRect();
+    r.addEventListener('mousemove',()=>{
       tip.innerHTML=`<b>${d[0]}</b><br>${d[1]}${suffix}`;tip.style.opacity=1;
-      tip.style.left=Math.min(Math.max(cx-tip.offsetWidth/2,4),W-tip.offsetWidth-4)+'px';tip.style.top=Math.max(yy-56,2)+'px';});
+      tip.style.left=pl+Math.min(Math.max(cx-tip.offsetWidth/2,0),W-tip.offsetWidth)+'px';tip.style.top=pt+Math.max(yy-60,0)+'px';});
     r.addEventListener('mouseleave',()=>tip.style.opacity=0);
   });
 }
@@ -1861,7 +1897,7 @@ function drawCols(id,data,{suffix="",hl=-1}={}){
 /* ================= líneas múltiples ================= */
 function drawMulti(id,cfg){
   const shell=document.getElementById(id); if(!shell)return; clear(shell);
-  const W=shell.clientWidth-2,H=shell.clientHeight-2; if(W<80||H<80)return;
+  const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
   const P={l:40,r:46,t:26,b:30};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const n=cfg.cats.length, max=80;
@@ -1895,13 +1931,12 @@ function drawMulti(id,cfg){
   const cross=el('line',{y1:P.t,y2:H-P.b,stroke:C.faint,'stroke-width':1,'stroke-dasharray':'3 3',opacity:0},svg);
   const hit=el('rect',{x:P.l,y:P.t,width:W-P.l-P.r,height:H-P.t-P.b,fill:'transparent'},svg);
   hit.addEventListener('mousemove',ev=>{
-    const rc=shell.getBoundingClientRect();
-    const i=Math.max(0,Math.min(n-1,Math.round((ev.clientX-rc.left-P.l)/((W-P.l-P.r)/(n-1)))));
+    const i=Math.max(0,Math.min(n-1,Math.round((svgX(svg,ev)-P.l)/((W-P.l-P.r)/(n-1)))));
     cross.setAttribute('x1',x(i));cross.setAttribute('x2',x(i));cross.setAttribute('opacity',1);
     tip.innerHTML=`<b>${cfg.cats[i]}</b><br>`+cfg.series.map(s=>`${s.n}: <b>${s.v[i]}</b>`).join('<br>');
     tip.style.opacity=1;
-    tip.style.left=Math.min(Math.max(x(i)-tip.offsetWidth/2,4),W-tip.offsetWidth-4)+'px';
-    tip.style.top=P.t+6+'px';
+    tip.style.left=pl+Math.min(Math.max(x(i)-tip.offsetWidth/2,0),W-tip.offsetWidth)+'px';
+    tip.style.top=pt+P.t+6+'px';
   });
   hit.addEventListener('mouseleave',()=>{tip.style.opacity=0;cross.setAttribute('opacity',0)});
 }
@@ -1909,7 +1944,7 @@ function drawMulti(id,cfg){
 /* ================= barra segmentada (participación) ================= */
 function drawShare(id,data){
   const shell=document.getElementById(id); if(!shell)return; clear(shell);
-  const W=shell.clientWidth-2,H=shell.clientHeight-2; if(W<80||H<80)return;
+  const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const cols=[C.crimson,C.amber,C.teal,C.bar];
   const barH=Math.min(64,H*.3), top=H*.30, total=data.reduce((s,d)=>s+d[1],0);
@@ -1938,7 +1973,7 @@ function drawShare(id,data){
 /* ================= columnas agrupadas ================= */
 function drawGroupCols(id,cats,series){
   const shell=document.getElementById(id); if(!shell)return; clear(shell);
-  const W=shell.clientWidth-2,H=shell.clientHeight-2; if(W<80||H<80)return;
+  const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
   const P={l:36,r:14,t:22,b:46};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const max=Math.max(...series.flatMap(s=>s.v))*1.14;
@@ -1959,8 +1994,8 @@ function drawGroupCols(id,cats,series){
       r.addEventListener('mousemove',()=>{
         tip.innerHTML=`<b>${c.replace(/\n/g,' ')}</b><br>`+series.map(z=>`${z.n}: <b>${z.v[i]}</b>`).join('<br>');
         tip.style.opacity=1;
-        tip.style.left=Math.min(Math.max(gx-tip.offsetWidth/2+bw*1.5,4),W-tip.offsetWidth-4)+'px';
-        tip.style.top=Math.max(yy-70,2)+'px';});
+        tip.style.left=pl+Math.min(Math.max(gx-tip.offsetWidth/2+bw*1.5,0),W-tip.offsetWidth)+'px';
+        tip.style.top=pt+Math.max(yy-74,0)+'px';});
       r.addEventListener('mouseleave',()=>tip.style.opacity=0);
     });
     c.split('\n').forEach((line,li)=>{
