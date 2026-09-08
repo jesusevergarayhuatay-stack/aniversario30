@@ -112,6 +112,9 @@
   .tiles.c5 .tile:nth-child(1){grid-column:span 3}
   .tiles.c5 .tile:nth-child(2){grid-column:span 3}
   .tiles.c5 .tile:nth-child(n+3){grid-column:span 2}
+  .tiles.c7{grid-template-columns:repeat(12,1fr);grid-template-rows:1fr 1fr}
+  .tiles.c7 .tile:nth-child(-n+3){grid-column:span 4}
+  .tiles.c7 .tile:nth-child(n+4){grid-column:span 3}
   .tile{
     background:var(--surface);border:1px solid var(--line);border-radius:10px;
     padding:clamp(14px,2.4vh,26px) clamp(16px,2vw,28px);
@@ -164,6 +167,9 @@
   .unit h4{font-family:var(--f-display);font-weight:700;font-size:clamp(17px,2.8vh,27px);line-height:1.22;color:var(--ink)}
   .unit p{color:var(--muted);font-size:clamp(14px,2.35vh,24px);line-height:1.45}
   .unit p b{color:var(--ink-2)}
+  .units.big .unit h4{font-size:clamp(21px,3.5vh,37px);line-height:1.14}
+  .units.big .unit p{font-size:clamp(17px,3vh,32px);line-height:1.38}
+  .units.big .unit .uk{font-size:clamp(12px,2vh,19px)}
   /* lanzamiento de marca · Defensor Universitario */
   .launch .lockup{display:flex;flex-direction:column;align-items:flex-start}
   .launch .kicker{
@@ -339,7 +345,7 @@
   .card h3 .tag{
     font-size:clamp(11px,1.5vh,14px);font-weight:800;letter-spacing:.12em;color:var(--crimson);
   }
-  .card p{color:var(--muted);font-size:clamp(14px,2.35vh,24px);line-height:1.5}
+  .card p{color:var(--muted);font-size:clamp(15px,2.5vh,26px);line-height:1.46}
   .card p b{color:var(--ink-2)}
   /* chart shells */
   .chart-shell{flex:1;min-height:0;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(12px,2vh,22px)}
@@ -353,6 +359,19 @@
     font-variant-numeric:tabular-nums;box-shadow:0 6px 20px rgba(0,0,0,.45);
   }
   .tooltip b{color:var(--ink)}
+  .togs{display:flex;gap:clamp(8px,1vw,14px);margin-bottom:clamp(8px,1.4vh,14px);flex-wrap:wrap}
+  .tog{
+    display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+    font-family:var(--f-display);font-weight:700;font-size:clamp(13px,2.1vh,21px);
+    color:var(--ink-2);background:var(--surface);border:1px solid var(--line);
+    border-radius:999px;padding:clamp(6px,1.1vh,11px) clamp(13px,1.4vw,20px);
+    transition:opacity .15s,border-color .15s,background .15s;
+  }
+  .tog .dotc{width:13px;height:13px;border-radius:50%;flex:0 0 13px}
+  .tog:hover{border-color:rgba(226,58,78,.5)}
+  .tog:focus-visible{outline:2px solid var(--crimson);outline-offset:3px}
+  .tog[aria-pressed="false"]{opacity:.4;color:var(--faint)}
+  .tog[aria-pressed="false"] .dotc{background:var(--faint)!important}
   .legend{display:flex;gap:22px;font-size:clamp(11px,1.9vh,18px);color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
   .legend .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
   /* phases curve */
@@ -506,7 +525,7 @@
   <h2>Una institución al servicio de la ciudadanía</h2>
   <p class="lede">Desde 1996, la Defensoría del Pueblo defiende los <strong>derechos fundamentales de la persona y de la comunidad</strong> y supervisa que el Estado cumpla sus deberes (Constitución, arts. 161 y 162).</p>
   <div class="body-fill">
-    <div class="cards" style="grid-template-columns:1fr 1fr 1fr;flex:1;align-content:stretch">
+    <div class="cards big" style="grid-template-columns:1fr 1fr 1fr;flex:1;align-content:stretch">
       <div class="card">
         <h3><span class="tag">01</span> Autónoma</h3>
         <p>Órgano constitucional <b>autónomo</b>: no depende de ningún gobierno. Su única herramienta es la <b>persuasión</b> — no sanciona ni impone; convence, supervisa y propone.</p>
@@ -520,13 +539,8 @@
         <p>Desde 2024, la ley le encarga expresamente <b>«realizar labores de prevención y monitoreo de los conflictos sociales y la mediación</b> para la promoción del diálogo y la solución pacífica de estos» (Ley N.° 26520, art. 9.8).</p>
       </div>
     </div>
-    <div class="statstrip">
-      <div><b>269</b><span><em>reportes mensuales</em> de conflictos sociales emitidos sin interrupción desde 2004</span></div>
-      <div><b>2 933</b><span><em>intervenciones defensoriales</em> solo en 2025 — récord desde 2018</span></div>
-      <div><b>+1 935</b><span><em>entidades supervisadas</em>: municipalidades, gobiernos regionales, ministerios y demás organismos del Estado</span></div>
-    </div>
   </div>
-  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Constitución Política, arts. 161–162 · Ley N.° 26520, modificada por Ley N.° 32028 · Balance ACSGO 2023–2026</span></div>
+  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Constitución Política, arts. 161–162 · Ley N.° 26520, modificada por la Ley N.° 32028</span></div>
 </section>
 
 <!-- 3 · QUÉ ES UN CONFLICTO -->
@@ -550,15 +564,17 @@
 <section class="slide" aria-label="La conflictividad en cifras">
   <div class="eyebrow">01 · Balance de la conflictividad</div>
   <h2>Años de memoria, mes a mes</h2>
-  <p class="lede">El registro sistemático de la base histórica de conflictos de la Adjuntía, construida sobre los reportes mensuales de conflictos sociales.</p>
-  <div class="tiles c5">
-    <div class="tile"><div class="num acc">29 283</div><div class="lbl"><b>registros de seguimiento</b> caso por caso, mes por mes — la memoria institucional de la conflictividad</div></div>
-    <div class="tile"><div class="num">+1 300</div><div class="lbl"><b>casos distintos</b> de conflicto social identificados y acompañados en el periodo</div></div>
-    <div class="tile"><div class="num">269</div><div class="lbl"><b>reportes mensuales</b> de conflictos sociales emitidos, mes a mes y sin interrupción</div></div>
+  <p class="lede" style="max-width:none">El registro sistemático de la base histórica de conflictos de la Adjuntía, construida sobre los reportes mensuales de conflictos sociales.</p>
+  <div class="tiles c7">
+    <div class="tile"><div class="num acc">+1 100</div><div class="lbl"><b>casos distintos</b> de conflicto social identificados y acompañados en el periodo</div></div>
+    <div class="tile"><div class="num">28 101</div><div class="lbl"><b>registros de seguimiento</b> caso por caso, mes por mes — la memoria institucional de la conflictividad</div></div>
+    <div class="tile"><div class="num">269</div><div class="lbl"><b>reportes mensuales</b> de conflictos sociales emitidos sin interrupción desde 2004</div></div>
     <div class="tile"><div class="num">~200</div><div class="lbl"><b>conflictos vigentes</b> en promedio cada mes, entre activos y latentes</div></div>
     <div class="tile"><div class="num">191</div><div class="lbl"><b>conflictos registrados hoy</b>: 150 activos y 41 latentes (jul. 2026)</div></div>
+    <div class="tile"><div class="num">2 933</div><div class="lbl"><b>intervenciones defensoriales</b> solo en 2025 — la cifra más alta desde 2018</div></div>
+    <div class="tile"><div class="num">+1 935</div><div class="lbl"><b>entidades supervisadas</b>: municipalidades, gobiernos regionales, ministerios y demás organismos del Estado</div></div>
   </div>
-  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica de conflictos ACSGO, reportes N.° 122–269 (abr. 2014 – jul. 2026)</span></div>
+  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica de conflictos ACSGO, reportes N.° 131–269 (ene. 2015 – jul. 2026) · Balance ACSGO 2023–2026</span></div>
 </section>
 
 <!-- 6 · EVOLUCIÓN -->
@@ -579,10 +595,10 @@
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-shell" id="typeChart"></div>
     </div>
-    <div class="cards" style="grid-template-rows:auto auto 1fr;align-content:start">
+    <div class="cards big" style="align-content:stretch">
       <div class="card">
         <h3>El agua, la tierra y sus recursos</h3>
-        <p>Los conflictos socioambientales giran en torno al <b>control, uso y acceso al ambiente y sus recursos</b>. Son el <b>63 %</b> de todo lo registrado en el periodo.</p>
+        <p>Los conflictos socioambientales giran en torno al <b>control, uso y acceso al ambiente y sus recursos</b>. Son el <b>62,9 %</b> de todo lo registrado en el periodo 2015–2026.</p>
       </div>
       <div class="card">
         <h3>La minería en el centro</h3>
@@ -594,7 +610,7 @@
       </div>
     </div>
   </div>
-  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica ACSGO 2014–2026 · Reporte N.° 269, julio 2026</span></div>
+  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica ACSGO 2015–2026 · Reporte N.° 269 · «Otros»: otros asuntos, cultivo ilegal de coca y electoral</span></div>
 </section>
 
 <!-- 8 · TERRITORIOS -->
@@ -605,7 +621,7 @@
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-shell" id="regionChart"></div>
     </div>
-    <div class="cards" style="align-content:start;grid-template-rows:auto auto">
+    <div class="cards big" style="align-content:stretch">
       <div class="card">
         <h3>Regiones que persisten</h3>
         <p><b>Loreto, Áncash, Cusco, Puno y Apurímac</b> encabezan la serie histórica completa: territorios con actividad extractiva intensa, pueblos indígenas y demandas de larga data.</p>
@@ -623,24 +639,29 @@
 <section class="slide" aria-label="Violencia y diálogo">
   <div class="eyebrow">01 · El dato que importa</div>
   <h2>La violencia no es el destino de un conflicto</h2>
-  <div class="body-fill">
-    <div class="tiles" style="grid-template-columns:repeat(3,1fr);flex:1">
-      <div class="tile">
-        <div class="num">65<small> %</small></div>
-        <div class="lbl">de los casos del periodo registró <b>al menos un hecho de violencia</b> en algún momento de su historia</div>
+  <p class="lede" style="max-width:none">Desde la perspectiva de la prevención y del diálogo <strong>no se debería llegar a situaciones de crisis ni violencia</strong> en los conflictos. Sin embargo, esto no siempre es así, por diferentes factores. Por ello, en los registros de la Defensoría del Pueblo tenemos las siguientes cifras:</p>
+  <div class="cols c31">
+    <div style="display:flex;flex-direction:column;min-height:0">
+      <div class="togs">
+        <button class="tog" id="togM" aria-pressed="true"><span class="dotc" style="background:#E23A4E"></span>Fallecidos</button>
+        <button class="tog" id="togH" aria-pressed="true"><span class="dotc" style="background:#C97F1F"></span>Heridos</button>
       </div>
-      <div class="tile">
-        <div class="num acc">6<small> de cada 10</small></div>
-        <div class="lbl">de esos casos con violencia lograron <b>encauzarse después hacia el diálogo</b></div>
+      <div class="chart-shell" id="victChart"></div>
+    </div>
+    <div class="cards big" style="align-content:stretch">
+      <div class="card">
+        <h3>2025 en detalle</h3>
+        <div class="actorline"><span class="k">Civiles</span><span class="v"><b>4</b> fallecidos · <b>69</b> heridos</span></div>
+        <div class="actorline"><span class="k">PNP / FF. AA.</span><span class="v"><b>0</b> fallecidos · <b>132</b> heridos</span></div>
+        <div class="actorline"><span class="k">Total</span><span class="v"><b>4</b> fallecidos · <b>201</b> heridos</span></div>
       </div>
-      <div class="tile">
-        <div class="num">59<small> %</small></div>
-        <div class="lbl">de los conflictos activos del periodo se ha encontrado <b>en fase de diálogo</b> — hoy son 87 de 150</div>
+      <div class="card">
+        <h3>Lo que dicen estas cifras</h3>
+        <p>Reflejan cómo <b>el Estado ha venido interviniendo</b> para hacer frente a la conflictividad social, y cómo <b>los grupos sociales en protesta han desarrollado sus acciones</b>. Resalta que 2022 y 2023 fueron los años con más conflictos.</p>
       </div>
     </div>
-    <p class="lede" style="margin-top:clamp(12px,2.4vh,24px);max-width:75ch">La evidencia acumulada es clara: <strong>incluso después de la crisis, el diálogo es posible</strong> — y es el camino por el que la mayoría de conflictos encuentra salida. Prevenir la escalada es proteger vidas y derechos.</p>
   </div>
-  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica ACSGO 2014–2026 · Reporte N.° 269, julio 2026</span></div>
+  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Registros de la Defensoría del Pueblo · Balance ACSGO 2023–2025</span></div>
 </section>
 
 <!-- 10 · VIDAS -->
@@ -677,9 +698,9 @@
   <h2>Estar donde se conversa, no solo donde se protesta</h2>
   <div class="cols">
     <div class="tiles" style="grid-template-columns:1fr;align-content:stretch">
-      <div class="tile"><div class="num acc">728</div><div class="lbl"><b>casos</b> llegaron a instalar una <b>mesa de diálogo</b> — negociación directa, mediada o asistida</div></div>
-      <div class="tile"><div class="num">64<small> %</small></div><div class="lbl">de los casos tuvo <b>intervención activa de la Defensoría</b>: colaboración, observación, supervisión o mediación</div></div>
-      <div class="tile"><div class="num">147</div><div class="lbl"><b>casos</b> con la Defensoría actuando como <b>mediadora o facilitadora</b> del diálogo</div></div>
+      <div class="tile"><div class="num acc">699</div><div class="lbl"><b>casos</b> llegaron a instalar una <b>mesa de diálogo</b> — negociación directa, mediada o asistida</div></div>
+      <div class="tile"><div class="num">674</div><div class="lbl"><b>casos</b> con <b>intervención activa de la Defensoría</b>: colaboración, observación, supervisión o mediación</div></div>
+      <div class="tile"><div class="num">138</div><div class="lbl"><b>casos</b> con la Defensoría actuando como <b>mediadora o facilitadora</b> del diálogo</div></div>
     </div>
     <div class="cards" style="align-content:stretch">
       <div class="card">
@@ -696,7 +717,7 @@
       </div>
     </div>
   </div>
-  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica ACSGO 2014–2026 · Directiva N.° 0001-2026-DP/PAD</span></div>
+  <div class="footer"><span>Del conflicto al diálogo · 30 años</span><span class="src">Base histórica ACSGO 2015–2026 · Directiva N.° 0001-2026-DP/PAD</span></div>
 </section>
 
 <!-- 11 · LÍNEA DE TIEMPO NORMATIVA -->
@@ -906,94 +927,68 @@
 <section class="slide" aria-label="Sistema universitario">
   <div class="eyebrow">Informe defensorial · El sistema</div>
   <h2>148 universidades, un sistema bajo tensión</h2>
+  <p class="lede" style="max-width:none">De las <strong>148 universidades</strong> del país, 107 cuentan con licenciamiento vigente. Y detrás de casi toda protesta aparecen los mismos <strong>tres problemas</strong>.</p>
   <div class="cols c31">
     <div style="display:flex;flex-direction:column;min-height:0">
       <div class="chart-title">Presupuesto público en universidades públicas (S/ millones)</div>
       <div class="chart-shell" id="uPresChart"></div>
     </div>
-    <div class="cards" style="align-content:stretch">
+    <div class="cards big" style="align-content:stretch">
       <div class="card">
-        <h3>El licenciamiento partió el mapa</h3>
-        <p>De 148 universidades, <b>107 cuentan con licenciamiento vigente</b> y 41 lo tienen denegado. La Sunedu, creada por la Ley Universitaria N.° 30220 (2014), marcó el estándar.</p>
+        <h3><span class="tag">01</span> Presupuesto insuficiente</h3>
+        <p>El gasto promedio por universidad pública <b>se estancó</b> pese al alza nominal del presupuesto entre 2017 y 2026.</p>
       </div>
       <div class="card">
-        <h3>Más presupuesto, más repartido</h3>
-        <p>El presupuesto creció <b>53 %</b> entre 2017 y 2026, pero las universidades financiadas pasaron de 49 a 67: <b>el gasto promedio por institución se diluyó</b>.</p>
+        <h3><span class="tag">02</span> Brechas de infraestructura</h3>
+        <p>Persisten limitaciones en locales, equipamiento y <b>condiciones básicas de calidad</b> exigidas por la Sunedu.</p>
       </div>
       <div class="card">
-        <h3>El rezago que no se cierra</h3>
-        <p>Solo <b>6 universidades</b> peruanas figuran en el QS World Ranking 2027 y la inversión en I+D apenas llega al <b>0,12 %–0,2 % del PBI</b>.</p>
+        <h3><span class="tag">03</span> Situación docente y salarial</h3>
+        <p><b>Limitado cumplimiento en el aumento salarial</b> de la homologación remunerativa con el Poder Judicial (Ley N.° 30220, art. 96).</p>
       </div>
     </div>
   </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Ley Universitaria N.° 30220 · DIGESU–Minedu · Sunedu · Presupuesto público 2017–2026</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo I · DIGESU–Minedu · Sunedu · Presupuesto 2017–2026</span></div>
 </section>
 
-<!-- P2 · PROBLEMAS ESTRUCTURALES -->
-<section class="slide" aria-label="Problemas estructurales">
-  <div class="eyebrow">Informe defensorial · La raíz</div>
-  <h2>Tres problemas que están detrás de casi toda protesta</h2>
-  <div class="cards big" style="grid-template-columns:repeat(3,1fr);flex:1;align-content:stretch">
-    <div class="card">
-      <h3><span class="tag">01</span> Presupuesto insuficiente</h3>
-      <p>El gasto promedio por universidad pública <b>se estancó</b> pese al alza nominal del presupuesto entre 2017 y 2026.</p>
-    </div>
-    <div class="card">
-      <h3><span class="tag">02</span> Brechas de infraestructura</h3>
-      <p>Persisten limitaciones en locales, equipamiento y <b>condiciones básicas de calidad</b> exigidas por la Sunedu.</p>
-    </div>
-    <div class="card">
-      <h3><span class="tag">03</span> Situación docente y salarial</h3>
-      <p><b>Limitado cumplimiento en el aumento salarial</b> correspondiente a la homologación remunerativa con el Poder Judicial (Ley N.° 30220, art. 96).</p>
-    </div>
-  </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo I, balance general del sistema universitario</span></div>
-</section>
-
-<!-- P2 · EVOLUCIÓN TEMPORAL -->
+<!-- P2 · EVOLUCIÓN TEMPORAL Y PICOS -->
 <section class="slide" aria-label="Evolución temporal">
   <div class="eyebrow">Informe defensorial · Cuándo</div>
   <h2>La protesta universitaria tiene calendario</h2>
-  <p class="lede">Casi la mitad de las protestas del periodo ocurrió en <strong>2023</strong>. Y cada año se repiten dos picos: <strong>junio</strong>, con estudiantes, y <strong>octubre y noviembre</strong>, con docentes.</p>
-  <div class="cols" style="grid-template-columns:.85fr 1.4fr">
-    <div style="display:flex;flex-direction:column;min-height:0">
-      <div class="chart-title">Protestas por año</div>
-      <div class="chart-shell" id="uYearChart"></div>
+  <p class="lede" style="max-width:none">Casi la mitad de las protestas del periodo ocurrió en <strong>2023</strong>. Y cada año se repiten dos picos: <strong>junio</strong>, con estudiantes, y <strong>octubre y noviembre</strong>, con docentes.</p>
+  <div class="body-fill">
+    <div class="cols" style="grid-template-columns:.85fr 1.4fr;flex:1.45">
+      <div style="display:flex;flex-direction:column;min-height:0">
+        <div class="chart-title">Protestas por año</div>
+        <div class="chart-shell" id="uYearChart"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;min-height:0">
+        <div class="chart-title">Protestas por mes, según año</div>
+        <div class="chart-shell" id="uMonthChart"></div>
+      </div>
     </div>
-    <div style="display:flex;flex-direction:column;min-height:0">
-      <div class="chart-title">Protestas por mes, según año</div>
-      <div class="chart-shell" id="uMonthChart"></div>
-    </div>
-  </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">465 acciones colectivas de protesta · Oct. 2023: la FENDUP lideró 71 de 73 protestas del mes</span></div>
-</section>
-
-<!-- P2 · DOS PICOS -->
-<section class="slide" aria-label="Los dos picos">
-  <div class="eyebrow">Informe defensorial · Cuándo</div>
-  <h2>Junio con estudiantes; octubre y noviembre con docentes</h2>
-  <div class="deltas">
-    <div class="delta">
-      <div class="dh">Junio · pico estudiantil</div>
-      <div class="dv"><span class="to">55 %</span></div>
-      <div class="drop">30 de 54 protestas del mes</div>
-      <div class="dn">Cerca del <b>cierre del semestre académico</b>, los estudiantes exigen mejoras en gestión educativa, infraestructura y servicios.</div>
-    </div>
-    <div class="delta">
-      <div class="dh">Octubre 2023 · pico docente</div>
-      <div class="dv"><span class="to">97 %</span></div>
-      <div class="drop">71 de 73 protestas del mes</div>
-      <div class="dn">El mes más intenso de todo el periodo: la <b>FENDUP</b> concentró prácticamente la totalidad de las protestas registradas.</div>
-    </div>
-    <div class="delta">
-      <div class="dh">Noviembre 2023 · pico docente</div>
-      <div class="dv"><span class="to">75 %</span></div>
-      <div class="drop">40 de 53 demandas del mes</div>
-      <div class="dn">En pleno <b>debate presupuestal del Congreso</b>, los docentes exigen la homologación remunerativa con los jueces del Poder Judicial.</div>
+    <div class="deltas" style="flex:1;margin-top:clamp(10px,1.8vh,20px)">
+      <div class="delta">
+        <div class="dh">Junio · pico estudiantil</div>
+        <div class="dv"><span class="to">55 %</span></div>
+        <div class="drop">30 de 54 protestas del mes</div>
+        <div class="dn">Cerca del <b>cierre del semestre académico</b>.</div>
+      </div>
+      <div class="delta">
+        <div class="dh">Octubre 2023 · pico docente</div>
+        <div class="dv"><span class="to">97 %</span></div>
+        <div class="drop">71 de 73 protestas del mes</div>
+        <div class="dn">El mes más intenso del periodo: la <b>FENDUP</b> concentró casi todas.</div>
+      </div>
+      <div class="delta">
+        <div class="dh">Noviembre 2023 · pico docente</div>
+        <div class="dv"><span class="to">75 %</span></div>
+        <div class="drop">40 de 53 demandas del mes</div>
+        <div class="dn">En pleno <b>debate presupuestal del Congreso</b>.</div>
+      </div>
     </div>
   </div>
-  <p class="lede" style="margin:clamp(12px,2.2vh,22px) 0 0">Los dos picos coinciden con hitos del calendario: el <strong>cierre del semestre académico</strong>, en el caso de los estudiantes, y el <strong>debate presupuestal en el Congreso</strong>, en el de los docentes.</p>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo II, análisis temporal de las protestas</span></div>
+  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo II, análisis temporal · 465 acciones colectivas de protesta</span></div>
 </section>
 
 <!-- P2 · TERRITORIO -->
@@ -1019,7 +1014,7 @@
   <div class="eyebrow">Informe defensorial · Quiénes</div>
   <h2>Estudiantes y docentes: ocho de cada diez protestas</h2>
   <div class="chart-shell" id="uActChart" style="flex:0 0 auto;height:clamp(120px,19vh,165px)"></div>
-  <div class="cards" style="grid-template-columns:1fr 1fr 1fr;flex:1;align-content:stretch;margin-top:clamp(12px,2.2vh,22px)">
+  <div class="cards big" style="grid-template-columns:1fr 1fr 1fr;flex:1;align-content:stretch;margin-top:clamp(12px,2.2vh,22px)">
     <div class="card">
       <h3>Estudiantes · 45,2 %</h3>
       <p>Suelen ser organizadas por las <b>federaciones de estudiantes y centros federados</b>, con mesas directivas plurales por facultad.</p>
@@ -1152,7 +1147,7 @@
   <div class="eyebrow">Informe defensorial · Los casos</div>
   <h2>Cinco conflictos que llegaron a crisis</h2>
   <p class="lede">De los 13 casos gestionados por la Defensoría entre 2023 y 2025, el informe analiza a fondo cinco que alcanzaron la <strong>fase de crisis</strong> y representan la dinámica nacional.</p>
-  <div class="units" style="grid-template-columns:repeat(5,1fr)">
+  <div class="units big" style="grid-template-columns:repeat(5,1fr)">
     <div class="unit">
       <span class="uk">Institucionalizada</span>
       <h4>U.N. del Altiplano</h4>
@@ -1182,43 +1177,9 @@
   <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo III, afectación de derechos fundamentales</span></div>
 </section>
 
-<!-- P2 · CASO 1 SAN MARCOS -->
-<section class="slide" aria-label="Caso San Marcos">
-  <div class="eyebrow">Informe defensorial · Caso 1 de 5 · Institucionalizada</div>
-  <h2>San Marcos: cuatro días de toma</h2>
-  <div class="cols c31">
-    <div class="timeline">
-      <div class="tl-item hot"><span class="yr">10 set.</span><span class="tx">La FUSM inicia <b>toma de local indefinida</b></span></div>
-      <div class="tl-item"><span class="yr">10–12 set.</span><span class="tx">Clases virtualizadas y <b>reprogramación del examen de admisión</b></span></div>
-      <div class="tl-item hot"><span class="yr">13 set.</span><span class="tx"><b>Mesa de diálogo mediada por la Defensoría</b> y entrega del local</span></div>
-    </div>
-    <div class="cards" style="align-content:stretch">
-      <div class="card">
-        <h3>Actores</h3>
-        <div class="actorline"><span class="k">Demandante</span><span class="v">Federación Universitaria de San Marcos (FUSM)</span></div>
-        <div class="actorline"><span class="k">Demandado</span><span class="v">Autoridades universitarias del rectorado</span></div>
-      </div>
-      <div class="card">
-        <h3>Demandas</h3>
-        <ul class="dlist">
-          <li>Anular las modificaciones del Reglamento de Admisión 2026-I sobre segunda carrera</li>
-          <li>Anular los cobros de matrícula y mensualidad por segunda carrera</li>
-          <li>Incrementar las raciones del comedor universitario</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="rights">
-    <span class="rg"><span class="dotr"></span><b>Educación</b> · paralización parcial y virtualización</span>
-    <span class="rg"><span class="dotr"></span><b>Libre tránsito</b> · campus restringido</span>
-    <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos, comerciantes y concesionarios</span>
-  </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Universidad Nacional Mayor de San Marcos · Lima Metropolitana · Setiembre 2025</span></div>
-</section>
-
 <!-- P2 · CASO 2 ALTIPLANO -->
 <section class="slide" aria-label="Caso Altiplano">
-  <div class="eyebrow">Informe defensorial · Caso 2 de 5 · Institucionalizada</div>
+  <div class="eyebrow">Informe defensorial · Caso · Universidad institucionalizada</div>
   <h2>Altiplano: la crisis que volvió dos veces</h2>
   <div class="cols c31">
     <div class="timeline">
@@ -1254,81 +1215,9 @@
   <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Universidad Nacional del Altiplano · Puno · Junio y setiembre 2025 · 102 días de toma en el periodo</span></div>
 </section>
 
-<!-- P2 · CASO 3 TAYACAJA -->
-<section class="slide" aria-label="Caso Tayacaja">
-  <div class="eyebrow">Informe defensorial · Caso 3 de 5 · Comisión organizadora</div>
-  <h2>Tayacaja: cuando el conflicto se extiende fuera del campus</h2>
-  <div class="cols c31">
-    <div class="timeline">
-      <div class="tl-item hot"><span class="yr">30 set.</span><span class="tx"><b>Huelga indefinida y toma de local</b></span></div>
-      <div class="tl-item"><span class="yr">3 oct.</span><span class="tx">Bloqueo de la carretera de acceso a la provincia</span></div>
-      <div class="tl-item hot"><span class="yr">7 oct.</span><span class="tx">Bloqueo de la <b>ruta Imperial</b> (Huancavelica–Junín–Ayacucho); la Defensoría interpone <b>buenos oficios ante el Minedu</b></span></div>
-      <div class="tl-item"><span class="yr">8 oct.</span><span class="tx">Se publica la reconformación de la Comisión Organizadora</span></div>
-      <div class="tl-item hot"><span class="yr">10 oct.</span><span class="tx">Se levanta la toma tras la mesa de diálogo</span></div>
-    </div>
-    <div class="cards" style="align-content:stretch">
-      <div class="card">
-        <h3>Actores</h3>
-        <div class="actorline"><span class="k">Demandante</span><span class="v">Federación de Estudiantes de la UNAT, con respaldo de trabajadores de construcción civil y de la población de Tayacaja</span></div>
-        <div class="actorline"><span class="k">Demandado</span><span class="v">Ministerio de Educación · Comisión Organizadora de la UNAT</span></div>
-      </div>
-      <div class="card">
-        <h3>Demandas</h3>
-        <ul class="dlist">
-          <li>Cambio total de la Comisión Organizadora</li>
-          <li>Solución a la infraestructura de Ingeniería Industrial</li>
-          <li>Comité externo para licitar la obra de Ingeniería Forestal y Ambiental</li>
-          <li>Declaratoria de emergencia administrativa, técnica y financiera</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="rights">
-    <span class="rg"><span class="dotr"></span><b>Educación</b> · 9 días de toma de local</span>
-    <span class="rg alert"><span class="dotr"></span><b>Libre tránsito</b> · 8 días de bloqueo de vía interregional</span>
-    <span class="rg"><span class="dotr"></span><b>Trabajo</b> · transporte y actividad comercial de la zona</span>
-  </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">U.N. Autónoma de Tayacaja Daniel Hernández Morillo · Huancavelica · Setiembre–octubre 2025</span></div>
-</section>
-
-<!-- P2 · CASO 4 JAÉN -->
-<section class="slide" aria-label="Caso Jaén">
-  <div class="eyebrow">Informe defensorial · Caso 4 de 5 · Comisión organizadora</div>
-  <h2>Jaén: catorce días sin clases</h2>
-  <div class="cols c31">
-    <div class="timeline">
-      <div class="tl-item hot"><span class="yr">22 oct.</span><span class="tx"><b>Toma del campus universitario</b></span></div>
-      <div class="tl-item"><span class="yr">23–24 oct.</span><span class="tx">Reuniones de coordinación con el Minedu y la Defensoría</span></div>
-      <div class="tl-item"><span class="yr">26 oct.</span><span class="tx"><b>Reconformación de la Comisión Organizadora</b> (R.V. N.° 119-2024)</span></div>
-      <div class="tl-item hot"><span class="yr">30 oct.</span><span class="tx"><b>Mesa de diálogo mediada por la Defensoría</b> y suscripción de acuerdos</span></div>
-      <div class="tl-item"><span class="yr">4 nov.</span><span class="tx">Se levanta la toma y se reinician las actividades académicas</span></div>
-    </div>
-    <div class="cards" style="align-content:stretch">
-      <div class="card">
-        <h3>Actores</h3>
-        <div class="actorline"><span class="k">Demandante</span><span class="v">Federación de Estudiantes</span></div>
-        <div class="actorline"><span class="k">Demandado</span><span class="v">Ministerio de Educación · Comisión Organizadora de la Universidad</span></div>
-      </div>
-      <div class="card">
-        <h3>Demandas</h3>
-        <ul class="dlist">
-          <li>Cambio de la Comisión Organizadora, por presuntos actos de corrupción</li>
-          <li>Mejora de la infraestructura educativa: laboratorios y equipamiento</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="rights">
-    <span class="rg alert"><span class="dotr"></span><b>Educación</b> · 14 días consecutivos de paralización</span>
-    <span class="rg"><span class="dotr"></span><b>Libre tránsito</b> · campus restringido</span>
-    <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos, comerciantes y concesionarios</span>
-  </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Universidad Nacional de Jaén · Cajamarca · Octubre–noviembre 2024</span></div>
-</section>
-
 <!-- P2 · CASO 5 FENDUP -->
 <section class="slide" aria-label="Caso FENDUP">
-  <div class="eyebrow">Informe defensorial · Caso 5 de 5 · Alcance nacional</div>
+  <div class="eyebrow">Informe defensorial · Caso · Alcance nacional</div>
   <h2>FENDUP: una huelga en dieciséis regiones</h2>
   <div class="cols c31">
     <div class="timeline">
@@ -1362,31 +1251,6 @@
     <span class="rg"><span class="dotr"></span><b>Trabajo</b> · administrativos y concesionarios de las sedes</span>
   </div>
   <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Federación Nacional de Docentes Universitarios del Perú · 16 regiones · Octubre–diciembre 2025</span></div>
-</section>
-
-<!-- P2 · DERECHOS -->
-<section class="slide" aria-label="Derechos afectados">
-  <div class="eyebrow">Informe defensorial · El impacto</div>
-  <h2>Qué derechos se suspenden cuando una universidad se cierra</h2>
-  <div class="cards big" style="grid-template-columns:repeat(4,1fr);flex:1;align-content:stretch">
-    <div class="card">
-      <h3>Educación</h3>
-      <p>Paralización o virtualización de clases, reprogramación de exámenes de admisión y pérdida de horas académicas.</p>
-    </div>
-    <div class="card">
-      <h3>Libre tránsito</h3>
-      <p>Restricción del ingreso y desplazamiento en el campus y, en casos como Tayacaja, <b>bloqueo de carreteras interregionales</b>.</p>
-    </div>
-    <div class="card">
-      <h3>Trabajo</h3>
-      <p>Personal administrativo sin poder laborar, y comerciantes y concesionarios del campus sin ingresos mientras dura la medida.</p>
-    </div>
-    <div class="card" style="border-color:rgba(226,58,78,.5);background:var(--crimson-soft)">
-      <h3>Salud e integridad</h3>
-      <p>Cuando hay enfrentamiento, el costo son <b>personas heridas</b>. Es el umbral que la intervención preventiva busca evitar.</p>
-    </div>
-  </div>
-  <div class="footer"><span>Informe Defensorial · Protesta universitaria 2023–2025</span><span class="src">Informe Defensorial — capítulo III, análisis de la afectación de derechos fundamentales</span></div>
 </section>
 
 <!-- P2 · CONCLUSIONES -->
@@ -1470,7 +1334,7 @@
 <section class="slide" aria-label="Línea base e indicadores">
   <div class="eyebrow">Proyecto Defensor Universitario · La medida</div>
   <h2>Indicadores de partida</h2>
-  <p class="lede">El proyecto toma como línea base el <strong>número y la duración de las tomas de local universitario</strong>. Esta elección permite identificar y verificar directamente variaciones en la ocurrencia del fenómeno, de modo que la reducción del número o su duración en días constituye un resultado concreto.</p>
+  <p class="lede" style="max-width:none">El proyecto toma como línea base el <strong>número y la duración de las tomas de local universitario</strong>. Esta elección permite identificar y verificar directamente variaciones en la ocurrencia del fenómeno, de modo que la reducción del número o su duración en días constituye un resultado concreto.</p>
   <div class="cols c31">
     <div class="cards" style="grid-template-columns:1fr 1fr;align-content:stretch">
       <div class="card"><h3><span class="tag">01</span> Indicador agregado</h3><p>Número de tomas de local universitario al año a <b>nivel nacional</b>, tomando como referencia el máximo de 2023–2025.</p></div>
@@ -1611,9 +1475,9 @@
 /* ================= data ================= */
 const SERIES = [{"r":131,"m":"2015-01","t":212,"a":162,"l":50},{"r":132,"m":"2015-02","t":210,"a":160,"l":50},{"r":133,"m":"2015-03","t":210,"a":155,"l":55},{"r":134,"m":"2015-04","t":208,"a":149,"l":59},{"r":135,"m":"2015-05","t":211,"a":152,"l":59},{"r":136,"m":"2015-06","t":210,"a":149,"l":61},{"r":137,"m":"2015-07","t":209,"a":148,"l":61},{"r":138,"m":"2015-08","t":213,"a":152,"l":61},{"r":139,"m":"2015-09","t":214,"a":150,"l":64},{"r":140,"m":"2015-10","t":209,"a":150,"l":59},{"r":141,"m":"2015-11","t":215,"a":153,"l":62},{"r":142,"m":"2015-12","t":211,"a":145,"l":66},{"r":143,"m":"2016-01","t":211,"a":143,"l":68},{"r":144,"m":"2016-02","t":208,"a":142,"l":66},{"r":145,"m":"2016-03","t":211,"a":145,"l":66},{"r":146,"m":"2016-04","t":209,"a":145,"l":64},{"r":147,"m":"2016-05","t":212,"a":152,"l":60},{"r":148,"m":"2016-06","t":211,"a":151,"l":60},{"r":149,"m":"2016-07","t":213,"a":154,"l":59},{"r":150,"m":"2016-08","t":208,"a":152,"l":56},{"r":151,"m":"2016-09","t":204,"a":146,"l":58},{"r":152,"m":"2016-10","t":211,"a":154,"l":57},{"r":153,"m":"2016-11","t":213,"a":156,"l":57},{"r":154,"m":"2016-12","t":212,"a":156,"l":56},{"r":155,"m":"2017-01","t":210,"a":150,"l":60},{"r":156,"m":"2017-02","t":213,"a":155,"l":58},{"r":157,"m":"2017-03","t":204,"a":141,"l":63},{"r":158,"m":"2017-04","t":198,"a":139,"l":59},{"r":159,"m":"2017-05","t":178,"a":123,"l":55},{"r":160,"m":"2017-06","t":177,"a":123,"l":54},{"r":161,"m":"2017-07","t":177,"a":115,"l":62},{"r":162,"m":"2017-08","t":166,"a":108,"l":58},{"r":163,"m":"2017-09","t":168,"a":112,"l":56},{"r":164,"m":"2017-10","t":170,"a":114,"l":56},{"r":165,"m":"2017-11","t":171,"a":118,"l":53},{"r":166,"m":"2017-12","t":169,"a":118,"l":51},{"r":167,"m":"2018-01","t":176,"a":124,"l":52},{"r":168,"m":"2018-02","t":182,"a":130,"l":52},{"r":169,"m":"2018-03","t":188,"a":135,"l":53},{"r":170,"m":"2018-04","t":195,"a":142,"l":53},{"r":171,"m":"2018-05","t":202,"a":150,"l":52},{"r":172,"m":"2018-06","t":198,"a":144,"l":54},{"r":174,"m":"2018-08","t":196,"a":134,"l":62},{"r":175,"m":"2018-09","t":201,"a":142,"l":59},{"r":176,"m":"2018-10","t":199,"a":142,"l":57},{"r":177,"m":"2018-11","t":194,"a":136,"l":58},{"r":178,"m":"2018-12","t":181,"a":130,"l":51},{"r":179,"m":"2019-01","t":179,"a":133,"l":46},{"r":180,"m":"2019-02","t":179,"a":132,"l":47},{"r":181,"m":"2019-03","t":183,"a":135,"l":48},{"r":182,"m":"2019-04","t":184,"a":136,"l":48},{"r":183,"m":"2019-05","t":176,"a":129,"l":47},{"r":184,"m":"2019-06","t":178,"a":130,"l":48},{"r":185,"m":"2019-07","t":184,"a":135,"l":49},{"r":186,"m":"2019-08","t":186,"a":138,"l":48},{"r":188,"m":"2019-10","t":187,"a":134,"l":53},{"r":189,"m":"2019-11","t":185,"a":134,"l":51},{"r":190,"m":"2019-12","t":184,"a":133,"l":51},{"r":191,"m":"2020-01","t":178,"a":127,"l":51},{"r":192,"m":"2020-02","t":188,"a":137,"l":51},{"r":193,"m":"2020-03","t":188,"a":137,"l":51},{"r":194,"m":"2020-04","t":188,"a":137,"l":51},{"r":195,"m":"2020-05","t":189,"a":138,"l":51},{"r":196,"m":"2020-06","t":190,"a":140,"l":50},{"r":197,"m":"2020-07","t":192,"a":142,"l":50},{"r":198,"m":"2020-08","t":190,"a":143,"l":47},{"r":199,"m":"2020-09","t":189,"a":142,"l":47},{"r":200,"m":"2020-10","t":191,"a":144,"l":47},{"r":201,"m":"2020-11","t":198,"a":147,"l":51},{"r":202,"m":"2020-12","t":197,"a":146,"l":51},{"r":203,"m":"2021-01","t":196,"a":145,"l":51},{"r":204,"m":"2021-02","t":197,"a":144,"l":53},{"r":205,"m":"2021-03","t":194,"a":143,"l":51},{"r":206,"m":"2021-04","t":191,"a":141,"l":50},{"r":207,"m":"2021-05","t":191,"a":142,"l":49},{"r":208,"m":"2021-06","t":193,"a":138,"l":55},{"r":209,"m":"2021-07","t":195,"a":137,"l":58},{"r":210,"m":"2021-08","t":196,"a":139,"l":57},{"r":211,"m":"2021-09","t":198,"a":142,"l":56},{"r":212,"m":"2021-10","t":198,"a":148,"l":50},{"r":213,"m":"2021-11","t":199,"a":147,"l":52},{"r":214,"m":"2021-12","t":202,"a":148,"l":54},{"r":215,"m":"2022-01","t":203,"a":154,"l":49},{"r":216,"m":"2022-02","t":203,"a":157,"l":46},{"r":217,"m":"2022-03","t":208,"a":160,"l":48},{"r":218,"m":"2022-04","t":209,"a":160,"l":49},{"r":219,"m":"2022-05","t":205,"a":151,"l":54},{"r":220,"m":"2022-06","t":207,"a":153,"l":54},{"r":221,"m":"2022-07","t":208,"a":152,"l":56},{"r":222,"m":"2022-08","t":209,"a":149,"l":60},{"r":223,"m":"2022-09","t":211,"a":152,"l":59},{"r":224,"m":"2022-10","t":218,"a":159,"l":59},{"r":225,"m":"2022-11","t":221,"a":161,"l":60},{"r":226,"m":"2022-12","t":221,"a":160,"l":61},{"r":227,"m":"2023-01","t":219,"a":156,"l":63},{"r":228,"m":"2023-02","t":218,"a":157,"l":61},{"r":229,"m":"2023-03","t":221,"a":162,"l":59},{"r":230,"m":"2023-04","t":225,"a":165,"l":60},{"r":231,"m":"2023-05","t":223,"a":168,"l":55},{"r":232,"m":"2023-06","t":219,"a":165,"l":54},{"r":233,"m":"2023-07","t":225,"a":172,"l":53},{"r":234,"m":"2023-08","t":225,"a":172,"l":53},{"r":235,"m":"2023-09","t":224,"a":176,"l":48},{"r":236,"m":"2023-10","t":224,"a":176,"l":48},{"r":237,"m":"2023-11","t":218,"a":170,"l":48},{"r":238,"m":"2023-12","t":215,"a":168,"l":47},{"r":239,"m":"2024-01","t":217,"a":175,"l":42},{"r":240,"m":"2024-02","t":213,"a":167,"l":46},{"r":241,"m":"2024-03","t":209,"a":166,"l":43},{"r":242,"m":"2024-04","t":208,"a":168,"l":40},{"r":243,"m":"2024-05","t":209,"a":166,"l":43},{"r":244,"m":"2024-06","t":212,"a":164,"l":48},{"r":245,"m":"2024-07","t":209,"a":159,"l":50},{"r":246,"m":"2024-08","t":206,"a":157,"l":49},{"r":247,"m":"2024-09","t":206,"a":161,"l":45},{"r":248,"m":"2024-10","t":209,"a":163,"l":46},{"r":249,"m":"2024-11","t":194,"a":154,"l":40},{"r":250,"m":"2024-12","t":196,"a":148,"l":48},{"r":251,"m":"2025-01","t":197,"a":146,"l":51},{"r":252,"m":"2025-02","t":191,"a":144,"l":47},{"r":253,"m":"2025-03","t":193,"a":141,"l":52},{"r":254,"m":"2025-04","t":197,"a":143,"l":54},{"r":255,"m":"2025-05","t":195,"a":145,"l":50},{"r":256,"m":"2025-06","t":195,"a":147,"l":48},{"r":257,"m":"2025-07","t":199,"a":150,"l":49},{"r":258,"m":"2025-08","t":195,"a":148,"l":47},{"r":259,"m":"2025-09","t":199,"a":160,"l":39},{"r":260,"m":"2025-10","t":197,"a":166,"l":31},{"r":261,"m":"2025-11","t":204,"a":168,"l":36},{"r":262,"m":"2025-12","t":204,"a":164,"l":40},{"r":263,"m":"2026-01","t":193,"a":164,"l":29},{"r":264,"m":"2026-02","t":192,"a":165,"l":27},{"r":265,"m":"2026-03","t":193,"a":161,"l":32},{"r":266,"m":"2026-04","t":190,"a":159,"l":31},{"r":267,"m":"2026-05","t":195,"a":153,"l":42},{"r":268,"m":"2026-06","t":197,"a":151,"l":46},{"r":269,"m":"2026-07","t":191,"a":150,"l":41}];
 const TYPES = [
-  ["Socioambiental",63.1],["Asuntos de gob. nacional",8.5],["Comunal",7.4],
-  ["Asuntos de gob. local",7.2],["Asuntos de gob. regional",5.0],["Demarcación territorial",3.3],
-  ["Otros asuntos",2.9],["Laboral",2.4],["Otros tipos",0.3]
+  ["Socioambiental",62.9],["Asuntos de gob. nacional",8.6],["Comunal",7.4],
+  ["Asuntos de gob. local",7.2],["Asuntos de gob. regional",5.1],
+  ["Demarcación territorial",3.2],["Otros Asuntos",3.2],["Laboral",2.4]
 ];
 const REGIONS = [
   ["Loreto",22],["Puno",21],["Áncash",16],["Piura",14],["Cusco",13],
@@ -1695,7 +1559,8 @@ addEventListener('touchend',e=>{
 const NS="http://www.w3.org/2000/svg";
 function el(n,attrs,parent){const e=document.createElementNS(NS,n);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
 function clear(node){while(node.firstChild)node.removeChild(node.firstChild)}
-function fmt(n){return n.toLocaleString('es-PE')}
+function fmt(n){return nsep(n)}
+function nsep(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')}
 const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
 function mlabel(m){const[y,mm]=m.split('-');return MESES[+mm-1]+'. '+y}
 
@@ -1771,13 +1636,43 @@ function drawLine(){
   hit.addEventListener('mouseleave',()=>{tip.style.opacity=0;cross.setAttribute('opacity',0);dot.setAttribute('opacity',0)});
 }
 
+/* etiqueta que se ajusta al ancho disponible: 1 o 2 lineas, sin recortes */
+function wrapLabel(svg,x,ycen,str,maxW,fs,fill,weight,slotH){
+  const t=el('text',{x,'text-anchor':'end',fill,'font-family':'Atkinson Hyperlegible','font-weight':weight,'font-size':fs},svg);
+  const meas=v=>{t.textContent=v;return (t.getComputedTextLength?t.getComputedTextLength():v.length*fs*.52)||v.length*fs*.52};
+  const full=meas(str);
+  if(full<=maxW){t.setAttribute('y',(ycen+fs*.36).toFixed(1));return t;}
+  const words=String(str).split(/\s+/);
+  let best=null,bw=Infinity;
+  for(let k=1;k<words.length;k++){
+    const a=words.slice(0,k).join(' '),b=words.slice(k).join(' ');
+    const m=Math.max(meas(a),meas(b));
+    if(m<bw){bw=m;best=[a,b];}
+  }
+  if(!best){
+    const f1=Math.max(10,fs*maxW/full);
+    t.setAttribute('font-size',f1.toFixed(1));t.textContent=str;
+    t.setAttribute('y',(ycen+f1*.36).toFixed(1));return t;
+  }
+  let f2=fs;
+  if(bw>maxW)f2=fs*maxW/bw;
+  if(slotH)f2=Math.min(f2,slotH*.42);
+  f2=Math.max(10,f2);
+  t.textContent='';
+  t.setAttribute('font-size',f2.toFixed(1));
+  t.setAttribute('y',(ycen-f2*.10).toFixed(1));
+  const s1=el('tspan',{x,dy:0},t);s1.textContent=best[0];
+  const s2=el('tspan',{x,dy:(f2*1.08).toFixed(1)},t);s2.textContent=best[1];
+  return t;
+}
+
 /* ================= horizontal bars ================= */
 function drawBars(id,data,{unit='',pct=false,hl=0,labelW=null,labelFs=null}={}){
   const shell=document.getElementById(id); if(!shell)return;
   clear(shell);
   const {W,H,pl,pt}=boxOf(shell);
   if(W<80||H<80)return;
-  const P={l:labelW?Math.min(labelW,W*.52):Math.min(200,W*.34),r:64,t:8,b:8};
+  const P={l:labelW?Math.min(labelW,W*.52):Math.min(240,W*.34),r:88,t:8,b:8};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const max=Math.max(...data.map(d=>d[1]));
   const bh=(H-P.t-P.b)/data.length;
@@ -1787,11 +1682,10 @@ function drawBars(id,data,{unit='',pct=false,hl=0,labelW=null,labelFs=null}={}){
     const yy=P.t+bh*i+(bh-bar)/2;
     const w=Math.max(3,(W-P.l-P.r)*d[1]/max);
     const fill=i<hl?C.crimson:C.bar;
-    const lb=el('text',{x:P.l-10,y:yy+bar/2+4,'text-anchor':'end',fill:i<hl?C.ink:C.muted,'font-size':labelFs||Math.min(19,bh*.44),'font-family':'Atkinson Hyperlegible','font-weight':i<hl?700:400},svg);
-    lb.textContent=d[0];
+    wrapLabel(svg,P.l-10,yy+bar/2,d[0],P.l-14,labelFs||Math.min(30,bh*.42),i<hl?C.ink:C.muted,i<hl?700:400,bh);
     const r=el('rect',{x:P.l,y:yy,width:w,height:bar,fill,rx:0},svg);
     el('rect',{x:P.l+w-Math.min(4,w),y:yy,width:Math.min(4,w),height:bar,fill,rx:2},svg);
-    const v=el('text',{x:P.l+w+8,y:yy+bar/2+4,fill:C.ink2,'font-size':Math.min(21,Math.max(14,bar*.3)),'font-weight':700,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
+    const v=el('text',{x:P.l+w+8,y:yy+bar/2+4,fill:C.ink2,'font-size':Math.min(34,Math.max(17,bar*.30)),'font-weight':700,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
     v.textContent=pct?d[1].toFixed(1).replace('.',',')+' %':d[1]+unit;
     r.addEventListener('mousemove',ev=>{
       tip.innerHTML=`<b>${d[0]}</b><br>${pct?d[1].toFixed(1).replace('.',',')+' % de los registros':d[1]+' conflictos registrados'}`;
@@ -1836,6 +1730,14 @@ function drawPhases(){
     t1.textContent=name.toUpperCase();
     const t2=el('text',{x:cx+dx,y:ty+26,'text-anchor':'middle',fill:C.muted,'font-size':Math.min(21,W*.0135),'font-family':'Atkinson Hyperlegible'},svg);
     t2.textContent=desc;
+    [t1,t2].forEach(t=>{
+      const w=t.getComputedTextLength?t.getComputedTextLength():0;
+      if(!w)return;
+      let xx=cx+dx;
+      if(xx+w/2>W-6)xx=W-6-w/2;
+      if(xx-w/2<6)xx=6+w/2;
+      t.setAttribute('x',xx.toFixed(1));
+    });
   });
   // transversal dialogue band
   const bandY=H*.92;
@@ -1866,11 +1768,85 @@ const U_TOMA=[["U.N. del Altiplano",102],["U.N. de Trujillo",77],["U.N. San Luis
               ["U.N.I. de Quillabamba",51],["U.N. Micaela Bastidas de Apurímac",43],["U.N. de Piura",31],
               ["U.N. San Cristóbal de Huamanga",28]];
 
+/* ================= víctimas por año (líneas con series conmutables) ================= */
+/* [año, fallecidos, heridos] */
+const VICT=[[2023,39,1365],[2024,1,34],[2025,4,201]];
+const VSTATE={m:true,h:true};
+function drawVict(){
+  const shell=document.getElementById('victChart'); if(!shell)return; clear(shell);
+  const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
+  const P={l:66,r:26,t:34,b:44};
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Personas fallecidas y heridas en conflictos sociales, por año"},shell);
+  const n=VICT.length;
+  const series=[];
+  if(VSTATE.m)series.push({k:1,n:'Fallecidos',c:C.crimson});
+  if(VSTATE.h)series.push({k:2,n:'Heridos',c:C.amber});
+  const raw=series.length?Math.max(...series.flatMap(s=>VICT.map(d=>d[s.k]))):1;
+  const rough=Math.max(raw,1)*1.15/4;
+  const mag=Math.pow(10,Math.floor(Math.log10(rough)));
+  const step=[1,2,2.5,5,10].map(c=>c*mag).find(c=>c>=rough)||10*mag;
+  const max=Math.max(step,Math.ceil(raw*1.12/step)*step);
+  const ticks=Math.max(1,Math.round(max/step));
+  const x=i=>n===1?P.l+(W-P.l-P.r)/2:P.l+(W-P.l-P.r)*i/(n-1);
+  const y=v=>P.t+(H-P.t-P.b)*(1-v/max);
+  for(let g=0;g<=ticks;g++){
+    const v=step*g;
+    el('line',{x1:P.l,x2:W-P.r,y1:y(v),y2:y(v),stroke:C.grid,'stroke-width':1},svg);
+    const t=el('text',{x:P.l-10,y:y(v)+6,'text-anchor':'end',fill:C.faint,'font-size':16,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
+    t.textContent=nsep(Math.round(v));
+  }
+  VICT.forEach((d,i)=>{
+    const t=el('text',{x:x(i),y:H-12,'text-anchor':'middle',fill:C.muted,'font-size':19,'font-weight':600,'font-family':'Archivo'},svg);
+    t.textContent=d[0];
+  });
+  series.forEach(sr=>{
+    const pts=VICT.map((d,i)=>[x(i),y(d[sr.k])]);
+    el('path',{d:'M'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join('L'),fill:'none',stroke:sr.c,'stroke-width':3.5,'stroke-linejoin':'round','stroke-linecap':'round'},svg);
+    pts.forEach((p,i)=>{
+      el('circle',{cx:p[0],cy:p[1],r:6,fill:sr.c,stroke:C.surface,'stroke-width':2.5},svg);
+      const other=series.find(o=>o!==sr);
+      const below=other&&VICT[i][sr.k]<VICT[i][other.k];
+      const dy=below?28:-17;
+      const anc=i===0?'start':(i===VICT.length-1?'end':'middle');
+      const lx=i===0?p[0]+4:(i===VICT.length-1?p[0]-4:p[0]);
+      const lb=el('text',{x:lx,y:Math.min(Math.max(p[1]+dy,P.t+14),H-P.b-6),'text-anchor':anc,fill:C.ink,'font-size':21,'font-weight':800,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
+      lb.textContent=nsep(VICT[i][sr.k]);
+    });
+  });
+  if(!series.length){
+    const t=el('text',{x:W/2,y:H/2,'text-anchor':'middle',fill:C.faint,'font-size':20,'font-family':'Atkinson Hyperlegible'},svg);
+    t.textContent='Active una serie para ver el gráfico';
+  }
+  const tip=document.createElement('div');tip.className='tooltip';shell.appendChild(tip);
+  VICT.forEach((d,i)=>{
+    const hw=(W-P.l-P.r)/Math.max(n,1);
+    const hit=el('rect',{x:x(i)-hw/2,y:P.t,width:hw,height:H-P.t-P.b,fill:'transparent'},svg);
+    hit.addEventListener('mousemove',()=>{
+      tip.innerHTML=`<b>${d[0]}</b><br>Fallecidos: <b>${nsep(d[1])}</b><br>Heridos: <b>${nsep(d[2])}</b>`;
+      tip.style.opacity=1;
+      tip.style.left=pl+Math.min(Math.max(x(i)-tip.offsetWidth/2,0),W-tip.offsetWidth)+'px';
+      tip.style.top=pt+P.t+4+'px';
+    });
+    hit.addEventListener('mouseleave',()=>tip.style.opacity=0);
+  });
+}
+(function(){
+  const bind=(id,key)=>{
+    const b=document.getElementById(id); if(!b)return;
+    b.addEventListener('click',()=>{
+      VSTATE[key]=!VSTATE[key];
+      b.setAttribute('aria-pressed',VSTATE[key]?'true':'false');
+      drawVict();
+    });
+  };
+  bind('togM','m'); bind('togH','h');
+})();
+
 /* ================= columnas verticales ================= */
 function drawCols(id,data,{suffix="",hl=-1}={}){
   const shell=document.getElementById(id); if(!shell)return; clear(shell);
   const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
-  const P={l:14,r:14,t:38,b:34};
+  const P={l:14,r:14,t:48,b:42};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const max=Math.max(...data.map(d=>d[1]))*1.16;
   const n=data.length, slot=(W-P.l-P.r)/n, bw=Math.min(slot*.56,92);
@@ -1882,10 +1858,10 @@ function drawCols(id,data,{suffix="",hl=-1}={}){
     const fill=(hl===i)?C.crimson:C.bar;
     const r=el('rect',{x:cx-bw/2,y:yy,width:bw,height:Math.max(2,hgt),fill},svg);
     el('rect',{x:cx-bw/2,y:yy,width:bw,height:Math.min(5,hgt),fill,rx:3},svg);
-    const v=el('text',{x:cx,y:yy-11,'text-anchor':'middle',fill:hl===i?C.ink:C.ink2,'font-size':Math.min(21,slot*.24),
+    const v=el('text',{x:cx,y:yy-13,'text-anchor':'middle',fill:hl===i?C.ink:C.ink2,'font-size':Math.min(34,slot*.30),
       'font-weight':800,'font-family':'Archivo','font-variant-numeric':'tabular-nums'},svg);
     v.textContent=d[1]+suffix;
-    const l=el('text',{x:cx,y:H-P.b+22,'text-anchor':'middle',fill:C.muted,'font-size':Math.min(15,slot*.18),'font-family':'Atkinson Hyperlegible'},svg);
+    const l=el('text',{x:cx,y:H-P.b+26,'text-anchor':'middle',fill:C.muted,'font-size':Math.min(23,slot*.22),'font-family':'Atkinson Hyperlegible'},svg);
     l.textContent=d[0];
     r.addEventListener('mousemove',()=>{
       tip.innerHTML=`<b>${d[0]}</b><br>${d[1]}${suffix}`;tip.style.opacity=1;
@@ -1898,26 +1874,30 @@ function drawCols(id,data,{suffix="",hl=-1}={}){
 function drawMulti(id,cfg){
   const shell=document.getElementById(id); if(!shell)return; clear(shell);
   const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
-  const P={l:40,r:46,t:26,b:30};
+  const P={l:46,r:64,t:30,b:38};
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const n=cfg.cats.length, max=80;
   const x=i=>P.l+(W-P.l-P.r)*i/(n-1);
   const y=v=>P.t+(H-P.t-P.b)*(1-v/max);
   for(let v=0;v<=80;v+=20){
     el('line',{x1:P.l,x2:W-P.r,y1:y(v),y2:y(v),stroke:C.grid,'stroke-width':1},svg);
-    const t=el('text',{x:P.l-8,y:y(v)+4,'text-anchor':'end',fill:C.faint,'font-size':12,'font-family':'Archivo'},svg);
+    const t=el('text',{x:P.l-8,y:y(v)+5,'text-anchor':'end',fill:C.faint,'font-size':16,'font-family':'Archivo'},svg);
     t.textContent=v;
   }
   cfg.cats.forEach((c,i)=>{
-    const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:C.faint,'font-size':15,'font-family':'Archivo'},svg);
+    const t=el('text',{x:x(i),y:H-10,'text-anchor':'middle',fill:C.muted,'font-size':18,'font-family':'Archivo'},svg);
     t.textContent=c;
   });
+  const used=[];
   cfg.series.forEach(s=>{
     const pts=s.v.map((v,i)=>[x(i),y(v)]);
-    el('path',{d:'M'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join('L'),fill:'none',stroke:s.c,'stroke-width':2.5,'stroke-linejoin':'round','stroke-linecap':'round'},svg);
+    el('path',{d:'M'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join('L'),fill:'none',stroke:s.c,'stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'},svg);
     const li=s.v.length-1;
-    el('circle',{cx:x(li),cy:y(s.v[li]),r:4.5,fill:s.c,stroke:C.surface,'stroke-width':2},svg);
-    const lb=el('text',{x:W-P.r+8,y:y(s.v[li])+4,fill:s.c,'font-size':13.5,'font-weight':800,'font-family':'Archivo'},svg);
+    el('circle',{cx:x(li),cy:y(s.v[li]),r:5,fill:s.c,stroke:C.surface,'stroke-width':2},svg);
+    let ly=y(s.v[li])+6;
+    used.forEach(u=>{if(Math.abs(ly-u)<22)ly=u+22});
+    used.push(ly);
+    const lb=el('text',{x:W-P.r+9,y:ly,fill:s.c,'font-size':19,'font-weight':800,'font-family':'Archivo'},svg);
     lb.textContent=s.n;
   });
   // picos anotados
@@ -1925,7 +1905,7 @@ function drawMulti(id,cfg){
     const s=cfg.series.find(z=>z.n===who);
     el('circle',{cx:x(i),cy:y(v),r:4,fill:s.c,stroke:C.surface,'stroke-width':2},svg);
   });
-  const a=el('text',{x:x(9),y:y(73)-14,'text-anchor':'middle',fill:C.ink2,'font-size':13,'font-weight':800,'font-family':'Archivo'},svg);
+  const a=el('text',{x:x(9),y:y(73)-15,'text-anchor':'middle',fill:C.ink2,'font-size':18,'font-weight':800,'font-family':'Archivo'},svg);
   a.textContent='73 · oct. 2023';
   const tip=document.createElement('div');tip.className='tooltip';shell.appendChild(tip);
   const cross=el('line',{y1:P.t,y2:H-P.b,stroke:C.faint,'stroke-width':1,'stroke-dasharray':'3 3',opacity:0},svg);
@@ -1947,13 +1927,13 @@ function drawShare(id,data){
   const {W,H,pl,pt}=boxOf(shell); if(W<80||H<80)return;
   const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:"img"},shell);
   const cols=[C.crimson,C.amber,C.teal,C.bar];
-  const barH=Math.min(64,H*.3), top=H*.30, total=data.reduce((s,d)=>s+d[1],0);
+  const barH=Math.min(112,H*.36), top=H*.24, total=data.reduce((s,d)=>s+d[1],0);
   let cx=0;
   data.forEach((d,i)=>{
     const w=(W)*d[1]/total, gap=(i<data.length-1)?2:0;
     el('rect',{x:cx,y:top,width:Math.max(2,w-gap),height:barH,fill:cols[i],rx:i===0||i===data.length-1?3:0},svg);
     if(d[1]/total>.08){
-      const t=el('text',{x:cx+ (w-gap)/2,y:top+barH/2+8,'text-anchor':'middle',fill:'#0A1626','font-size':Math.min(22,W*.018),'font-weight':900,'font-family':'Archivo'},svg);
+      const t=el('text',{x:cx+ (w-gap)/2,y:top+barH/2+11,'text-anchor':'middle',fill:'#0A1626','font-size':Math.min(32,W*.025),'font-weight':900,'font-family':'Archivo'},svg);
       t.textContent=d[1].toFixed(1).replace('.',',')+' %';
     }
     cx+=w;
@@ -1962,10 +1942,10 @@ function drawShare(id,data){
   let lx=0;
   data.forEach((d,i)=>{
     const g=el('g',{},svg);
-    el('rect',{x:lx,y:top+barH+26,width:11,height:11,rx:3,fill:cols[i]},g);
-    const t=el('text',{x:lx+18,y:top+barH+36,fill:C.ink2,'font-size':Math.min(16,W*.0135),'font-family':'Atkinson Hyperlegible'},g);
+    el('rect',{x:lx,y:top+barH+30,width:15,height:15,rx:3,fill:cols[i]},g);
+    const t=el('text',{x:lx+23,y:top+barH+43,fill:C.ink2,'font-size':Math.min(23,W*.0178),'font-family':'Atkinson Hyperlegible'},g);
     t.textContent=d[0]+'  ('+d[2]+' casos)';
-    lx += (t.getComputedTextLength?t.getComputedTextLength():120) + 46;
+    lx += (t.getComputedTextLength?t.getComputedTextLength():120) + 54;
   });
 }
 
@@ -1981,7 +1961,7 @@ function drawGroupCols(id,cats,series){
   const y=v=>P.t+(H-P.t-P.b)*(1-v/max);
   for(let v=0;v<=120;v+=40){
     el('line',{x1:P.l,x2:W-P.r,y1:y(v),y2:y(v),stroke:C.grid,'stroke-width':1},svg);
-    const t=el('text',{x:P.l-8,y:y(v)+4,'text-anchor':'end',fill:C.faint,'font-size':12,'font-family':'Archivo'},svg);
+    const t=el('text',{x:P.l-8,y:y(v)+5,'text-anchor':'end',fill:C.faint,'font-size':16,'font-family':'Archivo'},svg);
     t.textContent=v;
   }
   const tip=document.createElement('div');tip.className='tooltip';shell.appendChild(tip);
@@ -2052,18 +2032,19 @@ function drawAll(){
   requestAnimationFrame(()=>{
     drawLine();
     drawBars('typeChart',TYPES,{pct:true,hl:1});
+    drawVict();
     drawBars('regionChart',REGIONS,{hl:3});
     drawPhases();
     drawCols('uPresChart',[["2017",4773],["2019",5511],["2021",6100],["2023",6900],["2025",7734],["2026",7300]]);
     drawCols('uYearChart',U_YEAR,{hl:0});
     drawMulti('uMonthChart',U_MONTH);
     drawBars('uRegChart',U_REG,{hl:1});
-    drawBars('uTopChart',U_TOP,{hl:3,labelW:320,labelFs:16});
+    drawBars('uTopChart',U_TOP,{hl:3,labelW:340,labelFs:21});
     drawShare('uActChart',U_ACT);
-    drawBars('uDemChart',U_DEM,{hl:2,labelW:380,labelFs:17});
+    drawBars('uDemChart',U_DEM,{hl:2,labelW:400,labelFs:22});
     drawBars('uDirChart',U_DIR,{hl:1});
     drawBars('uForChart',U_FOR,{pct:true,hl:2});
-    drawBars('uTomaChart',U_TOMA,{hl:1,labelW:320,labelFs:17});
+    drawBars('uTomaChart',U_TOMA,{hl:1,labelW:330,labelFs:22});
     drawGroupCols('uCompChart',U_COMP.cats,U_COMP.series);
   });
 }
